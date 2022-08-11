@@ -2501,6 +2501,9 @@
           },
           "options__3": {
             "label": "Numbers"
+          },
+          "options__4": {
+            "label": "block"
           }
         },
         "auto_rotate": {
