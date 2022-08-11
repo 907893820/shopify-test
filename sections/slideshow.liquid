@@ -36,6 +36,12 @@
           <span aria-hidden="true"> / </span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
           <span class="slider-counter--total">{{ section.blocks.size }}</span>
+        {%- elsif section.settings.slider_visual == 'block'-%}
+        <div class="slideshow-block__control-wrapper">
+          {%- for block in section.block -%}
+          <button class="slidershow-block slider-counter__link slider-counter__link--{{ section.settings.slider_visual }}"></button>
+          {%- endfor %}
+        </div>
         {%- else-%}
           <div class="slideshow__control-wrapper">
             {%- for block in section.blocks -%}
@@ -143,12 +149,6 @@
           <span aria-hidden="true"> / </span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
           <span class="slider-counter--total">{{ section.blocks.size }}</span>
-        {%- elsif section.settings.slider_visual == 'block'-%}
-          <div class="slideshow-block__control-wrapper">
-            {%- for block in section.block -%}
-            <button class="slidershow-block slider-counter__link slider-counter__link--{{ section.settings.slider_visual }}"></button>
-            {%- endfor %}
-          </div>
         {%- else-%}
           <div class="slideshow__control-wrapper">
             {%- for block in section.blocks -%}
