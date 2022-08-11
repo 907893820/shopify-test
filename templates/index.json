@@ -47,8 +47,8 @@
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
-        "slider_visual": "dots",
-        "auto_rotate": false,
+        "slider_visual": "block",
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
