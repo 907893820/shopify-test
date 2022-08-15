@@ -35,7 +35,7 @@
           {%- if b.enable_click and b.btn_url != blank -%}
             <a class="uk-position-cover" href="{{ b.btn_url }}" rel="noopener"></a>
           {%- endif -%}
-          <div class="uk-position-relative uk-text-center tm-content position_{{ b.text_position }}">
+          <div class="uk-position-absolute tm-content text_position position_{{ b.text_position }}">
             {%- if b.title != blank -%}
               <h2 class="uk-h1 uk-text-600 uk-margin-small tm-title">{{ b.title }}</h2>
             {%- endif -%}
