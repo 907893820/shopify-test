@@ -1,0 +1,25 @@
+.index_new_swiper {
+    .uk-visible-toggle:not(:hover):not(:focus) {
+        .uk-hidden-hover:not(:focus-within){
+            position: absolute !important;
+            width: 36px !important;
+            height: 36px !important;
+            padding: 0 !important;
+            margin: 30px !important;
+            overflow: hidden !important;
+        }
+    }
+    .uk-position-center-right{
+        svg{
+            transform: rotate(180deg);
+        }
+    } 
+    .uk-background-center-center{
+        background-size: cover;
+    }
+    .uk-position-relative{
+        h2,h3{
+            color: white;
+        }
+    }
+}

@@ -14,6 +14,7 @@
 
 {% comment %}引入css{% endcomment %}
 {{ 'uikit.min.css' | asset_url | stylesheet_tag }}
+{{ 'components-slidershow.css' | asset_url | stylesheet_tag }}
 
 
 {% comment %}箭头图标{% endcomment %}
@@ -21,7 +22,11 @@
   <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M396.373333 346.453333L561.92 512l-165.546667 165.546667a42.496 42.496 0 1 0 60.16 60.16l195.84-195.84a42.496 42.496 0 0 0 0-60.16L456.533333 285.866667a42.496 42.496 0 0 0-60.16 0c-16.213333 16.64-16.64 43.946667 0 60.586666z" fill="currentColor"></path></svg>
 {%- endcapture -%}
 
-<div class="{% if s.enable_margin_top %}uk-margin-small-top{% endif %} uk-overflow-hidden" data-section-type="slideshow" data-section-id="{{ section.id }}">
+{%- capture operation_button -%}
+  <svg width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.03" points="13 16 7 10 13 4"></polyline></svg>
+{%- endcapture -%}
+
+<div class="{% if s.enable_margin_top %}uk-margin-small-top{% endif %} uk-overflow-hidden index_new_swiper" data-section-type="slideshow" data-section-id="{{ section.id }}">
   <div class="uk-visible-toggle uk-position-relative" uk-slideshow="{{ config | strip_newlines }}">
     <ul class="uk-slideshow-items">
       {%- for block in section.blocks -%}
@@ -31,11 +36,11 @@
             <a class="uk-position-cover" href="{{ b.btn_url }}" rel="noopener"></a>
           {%- endif -%}
           <div class="uk-position-relative uk-text-center tm-content">
-            {%- if b.subtitle != blank -%}
-              <h3 class="uk-margin-remove tm-subtitle">{{ b.subtitle }}</h3>
-            {%- endif -%}
             {%- if b.title != blank -%}
               <h2 class="uk-h1 uk-text-600 uk-margin-small tm-title">{{ b.title }}</h2>
+            {%- endif -%}
+            {%- if b.subtitle != blank -%}
+              <h3 class="uk-margin-remove tm-subtitle">{{ b.subtitle }}</h3>
             {%- endif -%}
             {%- if b.description != blank -%}
               <p class="uk-margin-small tm-description">{{ b.description }}</p>
@@ -65,11 +70,11 @@
     <ul class="uk-position-bottom-center uk-slideshow-nav uk-dotnav uk-flex-center uk-flex-middle uk-margin"></ul>
     <a class="uk-position-center-left uk-position-medium uk-icon-button uk-hidden-hover" href="#"
        uk-slideshow-item="previous">
-      <i uk-icon="icon: chevron-left; ratio: 1.2;"></i>
+      <i uk-icon="icon: chevron-left; ratio: 1.2;">{{ operation_button }}</i>
     </a>
     <a class="uk-position-center-right uk-position-medium uk-icon-button uk-hidden-hover" href="#"
        uk-slideshow-item="next">
-      <i uk-icon="icon: chevron-right; ratio: 1.2;"></i>
+      <i uk-icon="icon: chevron-right; ratio: 1.2;">{{ operation_button }}</i>
     </a>
   </div>
 </div>
