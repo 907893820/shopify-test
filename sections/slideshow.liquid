@@ -1,9 +1,30 @@
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
-{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+{%- assign s = section.settings -%}
+{%- assign enable_autoplay = s.enable_autoplay -%}
+{%- assign autoplay_interval = s.autoplay_interval -%}
+{%- assign animation = s.animation -%}
+
+{% comment %}轮播图配置{% endcomment %}
+{%- capture config -%}
+  {%- if enable_autoplay -%}
+    autoplay: true;autoplay_interval: {{ autoplay_interval | times: 1000 }};
+  {%- endif -%}
+  pauseOnHover: true; animation: {{ animation }}
+{%- endcapture -%}
+
+{% comment %}引入css{% endcomment %}
+{{ 'section-slideshow.min.css' | asset_url | stylesheet_tag }}
+
+{% comment %}箭头图标{% endcomment %}
+{%- capture icon_chevron_right -%}
+  <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M396.373333 346.453333L561.92 512l-165.546667 165.546667a42.496 42.496 0 1 0 60.16 60.16l195.84-195.84a42.496 42.496 0 0 0 0-60.16L456.533333 285.866667a42.496 42.496 0 0 0-60.16 0c-16.213333 16.64-16.64 43.946667 0 60.586666z" fill="currentColor"></path></svg>
+{%- endcapture -%}
 
 
-{%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
+{% comment %} {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
   @media screen and (max-width: 749px) {
     #Slider-{{ section.id }}::before,
@@ -24,9 +45,9 @@
     }
   }
   {%- endstyle -%}
-{%- endif -%}
+{%- endif -%} {% endcomment %}
 
-<slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
+{% comment %} <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
@@ -180,13 +201,67 @@
       </div>
     </noscript>
   {%- endif -%}
-</slideshow-component>
+</slideshow-component> {% endcomment %}
 
-{%- if request.design_mode -%}
+{% comment %} {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
+{%- endif -%} {% endcomment %}
 
-{% schema %}
+
+<div class="{% if s.enable_margin_top %}uk-margin-small-top{% endif %} uk-overflow-hidden" data-section-type="slideshow" data-section-id="{{ section.id }}">
+  <div class="uk-visible-toggle uk-position-relative" uk-slideshow="{{ config | strip_newlines }}">
+    <ul class="uk-slideshow-items">
+      {%- for block in section.blocks -%}
+        {%- assign b = block.settings -%}
+        <li class="uk-background-center-center uk-background-norepeat" data-index="{{ forloop.index0 }}" {% if b.pc_image != blank %}data-src="{{ b.pc_image | img_url: 'master' }}" uk-img="loading: eager"{% endif %} {{ block.shopify_attributes }}>
+          {%- if b.enable_click and b.btn_url != blank -%}
+            <a class="uk-position-cover" href="{{ b.btn_url }}" rel="noopener"></a>
+          {%- endif -%}
+          <div class="uk-position-relative uk-text-center tm-content">
+            {%- if b.subtitle != blank -%}
+              <h3 class="uk-margin-remove tm-subtitle">{{ b.subtitle }}</h3>
+            {%- endif -%}
+            {%- if b.title != blank -%}
+              <h2 class="uk-h1 uk-text-600 uk-margin-small tm-title">{{ b.title }}</h2>
+            {%- endif -%}
+            {%- if b.description != blank -%}
+              <p class="uk-margin-small tm-description">{{ b.description }}</p>
+            {%- endif -%}
+            {%- if b.btn_url != blank or b.btn_1_url != blank -%}
+              <div class="uk-margin-top uk-grid uk-grid-small uk-flex-center uk-child-width-auto" uk-grid>
+                {%- if b.btn_url != blank -%}
+                  <div>
+                    <a class="uk-button uk-button-small uk-button-default uk-border-round uk-text-500" href="{{ b.btn_url }}">
+                      {{ b.btn_text }} {{ icon_chevron_right }}
+                    </a>
+                  </div>
+                {%- endif -%}
+                {%- if b.btn_1_url != blank -%}
+                  <div>
+                    <a class="uk-button uk-button-small uk-button-default uk-border-round uk-text-500" href="{{ b.btn_1_url }}">
+                      {{ b.btn_1_text }} {{ icon_chevron_right }}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+    <ul class="uk-position-bottom-center uk-slideshow-nav uk-dotnav uk-flex-center uk-flex-middle uk-margin"></ul>
+    <a class="uk-position-center-left uk-position-medium uk-icon-button uk-hidden-hover" href="#"
+       uk-slideshow-item="previous">
+      <i uk-icon="icon: chevron-left; ratio: 1.2;"></i>
+    </a>
+    <a class="uk-position-center-right uk-position-medium uk-icon-button uk-hidden-hover" href="#"
+       uk-slideshow-item="next">
+      <i uk-icon="icon: chevron-right; ratio: 1.2;"></i>
+    </a>
+  </div>
+</div>
+
+{% comment %} {% schema %}
 {
   "name": "t:sections.slideshow.name",
   "tag": "section",
@@ -501,6 +576,159 @@
         },
         {
           "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} {% endcomment %}
+{% schema %}
+{
+  "name": "新版轮播图",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "边距配置",
+      "info": "配置边距"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_margin_top",
+      "label": "是否开启顶部边距?",
+      "default": false,
+      "info": "设置顶部的边距"
+    },
+    {
+      "type": "header",
+      "content": "自动滚动时间配置"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_autoplay",
+      "label": "是否开启自动滚动",
+      "default": false
+    },
+    {
+      "type": "number",
+      "id": "autoplay_interval",
+      "label": "自动切换时间(s)",
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "切换动画配置",
+      "info": "配置动画的切换方式"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "动画切换动效",
+      "default": "fade",
+      "options": [
+        {
+          "label": "闪现",
+          "value": "fade"
+        },
+        {
+          "label": "滑动",
+          "value": "slide"
+        },
+        {
+          "label": "缩放",
+          "value": "scale"
+        },
+        {
+          "label": "推入",
+          "value": "pull"
+        },
+        {
+          "label": "推出",
+          "value": "push"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "图文",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "pc_image",
+          "label": "电脑端图片(5120x1600)"
+        },
+        {
+          "type": "header",
+          "content": "文案配置",
+          "info": "配置文案的内容展示"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "副标题"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "描述"
+        },
+        {
+          "type": "header",
+          "content": "链接配置",
+          "info": "配置跳转链接"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "按钮1文案",
+          "default": "Buy Now"
+        },
+        {
+          "type": "url",
+          "id": "btn_url",
+          "label": "按钮1跳转地址",
+          "info": "不填则不显示"
+        },
+        {
+          "type": "text",
+          "id": "btn_1_text",
+          "label": "按钮2文案",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "btn_1_url",
+          "label": "按钮2跳转地址",
+          "info": "不填则不显示"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_click",
+          "label": "是否开启全屏点击?",
+          "default": false,
+          "info": "开启的时候会关闭按钮显示,并且会使用第一个配置的链接作为跳转链接."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "图文",
+      "name": "新版轮播图",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
         }
       ]
     }
