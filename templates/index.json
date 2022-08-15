@@ -11,7 +11,7 @@
             "subtitle": "123",
             "description": "123",
             "btn_text": "Buy Now",
-            "btn_url": "",
+            "btn_url": "shopify:\/\/products\/ep300",
             "btn_1_text": "Learn More",
             "btn_1_url": "",
             "enable_click": false
@@ -25,7 +25,7 @@
             "subtitle": "123",
             "description": "123",
             "btn_text": "Buy Now",
-            "btn_url": "",
+            "btn_url": "shopify:\/\/products\/ep500",
             "btn_1_text": "Learn More",
             "btn_1_url": "",
             "enable_click": false
