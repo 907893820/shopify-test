@@ -11,7 +11,7 @@
             "subtitle": "123",
             "description": "123",
             "btn_text": "Buy Now",
-            "btn_url": "",
+            "btn_url": "shopify:\/\/products\/ep300",
             "btn_1_text": "Learn More",
             "btn_1_url": "",
             "enable_click": false
@@ -25,7 +25,7 @@
             "subtitle": "123",
             "description": "123",
             "btn_text": "Buy Now",
-            "btn_url": "",
+            "btn_url": "shopify:\/\/products\/ep500",
             "btn_1_text": "Learn More",
             "btn_1_url": "",
             "enable_click": false
@@ -37,10 +37,10 @@
         "211dc75b-1af0-417e-8ee0-57fd2e7dc896"
       ],
       "settings": {
-        "enable_margin_top": false,
-        "enable_autoplay": false,
+        "enable_margin_top": true,
+        "enable_autoplay": true,
         "autoplay_interval": 3,
-        "animation": "fade"
+        "animation": "slide"
       }
     },
     "image_banner": {
