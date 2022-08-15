@@ -40,7 +40,7 @@
         "enable_margin_top": true,
         "enable_autoplay": true,
         "autoplay_interval": 3,
-        "animation": "push"
+        "animation": "slide"
       }
     },
     "image_banner": {
