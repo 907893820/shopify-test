@@ -35,7 +35,7 @@
           {%- if b.enable_click and b.btn_url != blank -%}
             <a class="uk-position-cover" href="{{ b.btn_url }}" rel="noopener"></a>
           {%- endif -%}
-          <div class="uk-position-relative uk-text-center tm-content">
+          <div class="uk-position-relative uk-text-center tm-content position_{{ b.text_position }}">
             {%- if b.title != blank -%}
               <h2 class="uk-h1 uk-text-600 uk-margin-small tm-title">{{ b.title }}</h2>
             {%- endif -%}
@@ -204,6 +204,50 @@
           "id": "btn_1_url",
           "label": "按钮2跳转地址",
           "info": "不填则不显示"
+        },
+        {
+          "type":"select",
+          "id":"text_position",
+          "label":"文案的位置配置",
+          "default":"topLeft",
+          "options":[
+            {
+              "label":"垂直向上水平向左",
+              "value":"topLeft"
+            },
+            {
+              "label":"垂直向上水平居中",
+              "value":"topCenter"
+            },
+            {
+              "label":"垂直向上水平向右",
+              "value":"topRight"
+            },
+            {
+              "label":"垂直居中水平向左",
+              "value":"middleLeft"
+            },
+            {
+              "label":"垂直居中水平居中",
+              "value":"middleCenter"
+            },
+            {
+              "label":"垂直居中水平向右",
+              "value":"middleRight"
+            },
+            {
+              "label":"垂直向下水平向左",
+              "value":"bottomLeft"
+            },
+            {
+              "label":"垂直向下水平居中",
+              "value":"bottomCenter"
+            },
+            {
+              "label":"垂直向下水平向右",
+              "value":"bottomRight"
+            }
+          ]
         },
         {
           "type": "checkbox",
