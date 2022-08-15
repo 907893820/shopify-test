@@ -3,55 +3,44 @@
     "1660204248cd785013": {
       "type": "slideshow",
       "blocks": {
-        "1660204247ea6bc72c-0": {
-          "type": "slide",
+        "4aa03788-25c5-4244-b175-d639dfcec486": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 20,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "pc_image": "shopify:\/\/shop_images\/09fcde363f7560d536390fde45352324.jpg",
+            "title": "123",
+            "subtitle": "123",
+            "description": "123",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "enable_click": false
           }
         },
-        "1660204247ea6bc72c-1": {
-          "type": "slide",
+        "211dc75b-1af0-417e-8ee0-57fd2e7dc896": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/09fcde363f7560d536390fde45352324.jpg",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": true,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
+            "pc_image": "shopify:\/\/shop_images\/eb79e3fc238a2030228cd4e4795aab3f.jpg",
+            "title": "123",
+            "subtitle": "123",
+            "description": "123",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "enable_click": false
           }
         }
       },
       "block_order": [
-        "1660204247ea6bc72c-0",
-        "1660204247ea6bc72c-1"
+        "4aa03788-25c5-4244-b175-d639dfcec486",
+        "211dc75b-1af0-417e-8ee0-57fd2e7dc896"
       ],
       "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "block",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
+        "enable_margin_top": false,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "animation": "fade"
       }
     },
     "image_banner": {
