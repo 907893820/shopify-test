@@ -20,6 +20,10 @@
   color: white;
 }
 
+.index_new_swiper .button-group {
+  display: block;
+}
+
 .index_new_swiper .uk-button {
   width: max-content;
   margin-top: 32px;
@@ -45,7 +49,8 @@
 .index_new_swiper .text_position {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .index_new_swiper .position_topLeft {

@@ -28,6 +28,10 @@
     }
   }
 
+  .button-group{
+    display: block;
+  }
+
   .uk-button {
     width: max-content;
     margin-top: 32px;
@@ -53,7 +57,8 @@
   .text_position{
     width: 100%;
     max-width: 1200px;
-    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   
