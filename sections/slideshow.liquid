@@ -46,7 +46,7 @@
               <p class="uk-margin-small tm-description">{{ b.description }}</p>
             {%- endif -%}
             {%- if b.btn_url != blank or b.btn_1_url != blank -%}
-              <div class="uk-margin-top uk-grid uk-grid-small uk-flex-center uk-child-width-auto" uk-grid>
+              <div class="uk-margin-top uk-grid uk-grid-small uk-flex-center uk-child-width-auto button-group" uk-grid>
                 {%- if b.btn_url != blank -%}
                   <div>
                     <a class="uk-button uk-button-small uk-button-default uk-border-round uk-text-500" href="{{ b.btn_url }}">
