@@ -130,19 +130,19 @@
           "83268853-b0ed-4140-a84f-25a3f7d63ec2": {
             "type": "menu",
             "settings": {
-              "title": "",
-              "super_navigation": "",
-              "super_menu_bg_color": "#ffffff",
-              "super_menu_liquid": ""
+              "title": "标签",
+              "super_navigation": "click",
+              "super_menu_bg_color": "#a35959",
+              "super_menu_liquid": "dsadasdasd"
             }
           },
           "773e7bc0-080f-464a-bf92-e05f2841ad17": {
             "type": "menu",
             "settings": {
-              "title": "",
-              "super_navigation": "",
+              "title": "1231as2d31sdasd",
+              "super_navigation": "1231as2d31sdasd",
               "super_menu_bg_color": "#ffffff",
-              "super_menu_liquid": ""
+              "super_menu_liquid": "1231as2d31sdasd"
             }
           }
         },
