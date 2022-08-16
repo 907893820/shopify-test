@@ -39,7 +39,7 @@
         "211dc75b-1af0-417e-8ee0-57fd2e7dc896"
       ],
       "settings": {
-        "enable_margin_top": true,
+        "enable_margin_top": false,
         "enable_autoplay": true,
         "autoplay_interval": 3,
         "animation": "slide"
