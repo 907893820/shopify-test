@@ -130,9 +130,9 @@
           "83268853-b0ed-4140-a84f-25a3f7d63ec2": {
             "type": "menu",
             "settings": {
-              "title": "标签",
-              "super_navigation": "产品目录",
-              "super_menu_bg_color": "#ecd7d7",
+              "title": "SHOP",
+              "super_navigation": "shop",
+              "super_menu_bg_color": "#ffffff",
               "super_menu_liquid": "<sup>123<\/sup><br>\n<h3>h3<\/h3>"
             }
           },
