@@ -1,0 +1,55 @@
+{% comment %} 页头右边工具 {% endcomment %}
+<div class="uk-navbar-right uk-flex-nowrap">
+  <a class="uk-navbar-toggle" href="javascript:;">
+    {% render 'icons', icon: 'phone', width: '24', height: '24' %}
+  </a>
+  <div class="uk-navbar-dropdown uk-margin-remove uk-padding-remove" uk-dropdown="animation: uk-animation-slide-top-small; duration: 500;">
+    <div class="uk-padding-small uk-text-center">
+      <div class="uk-text-500 uk-text-small">Monday to Friday <br> <small>9am - 5pm (PDT)</small></div>
+      <div class="uk-margin-small-top uk-text-500 uk-text-small">
+        Customer Service: <br> <a class="uk-text-500 uk-text-primary" href="tel:+1 702-463-4792">+1 702-463-4792</a>
+      </div>
+    </div>
+  </div>
+ 
+  {% comment %}站点切换图标{% endcomment %}
+  {% render 'header-switch-site' %}
+  {% comment %}用户图标{% endcomment %}
+  {%- if shop.customer_accounts_enabled -%}
+    <a class="uk-navbar-toggle" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+      {% render 'icons', icon: 'account' %}
+      <span class="uk-hidden">
+        {%- liquid
+          if customer
+            echo 'customer.account_fallback' | t
+          else
+            echo 'customer.log_in' | t
+          endif
+        -%}
+      </span>
+    </a>
+  {%- endif -%}
+  {%- comment -%} 搜索按钮 {%- endcomment -%}
+  {% render 'header-search-dropdown' %}
+  {%- comment -%} 下拉购物车 {%- endcomment -%}
+  {%- capture isCartPage -%}
+    {% if request.page_type != 'cart' %}
+      href="#cart-offcanvas-nav" uk-toggle
+    {% else %}
+      href="javascript:;"
+    {% endif %}
+  {%- endcapture -%}
+  <a id="cart-icon-bubble" class="uk-navbar-toggle" {{ isCartPage }}>
+    <i uk-icon="cart"></i>
+    {%- if cart != empty -%}
+      {%- if cart.item_count < 100 -%}
+        <span class="uk-badge" aria-hidden="true">{{ cart.item_count }}</span>
+      {%- else -%}
+        <span class="uk-badge" aria-hidden="true">99+</span>
+      {%- endif -%}
+      <span class="uk-hidden">{{ 'header.cart_count' | t: count: cart.item_count }}</span>
+    {%- endif -%}
+  </a>
+  {%- comment -%} 手机端菜单按钮 {%- endcomment -%}
+  <button class="uk-navbar-toggle uk-hidden@l" uk-toggle="target: #nav-offcanvas;" uk-navbar-toggle-icon></button>
+</div>

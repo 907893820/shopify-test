@@ -1,0 +1,64 @@
+{%- comment -%} 导航基础下拉栏 {%- endcomment -%}
+<li class="{%- if link.active or link.child_active -%} uk-active {%- endif -%}">
+  <a href="{{ link.url }}" uk-icon="icon: chevron-down;ratio: 0.8;">
+    {% assign my_sup_array = link.title | split: "^" %}
+    {{ my_sup_array.first | escape }}
+    {%- if my_sup_array.size == 2 -%}
+      <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
+    {%- endif -%}
+  </a>
+  <div class="uk-navbar-dropdown uk-section-default uk-margin-remove" uk-drop="pos: bottom-justify;delay-show: 125;boundary: .tm-header;boundary-align: true;flip: x;animation: uk-animation-slide-top-small;">
+    <div class="uk-container">
+      {% comment %}存在三级菜单时{% endcomment %}
+      {% if link.levels  >= 2 %}
+        <div class="uk-grid-small" uk-grid>
+          <div class="uk-width-auto@m">
+            <ul class="uk-tab-left uk-flex-around uk-height-1-1" uk-tab="connect: #js-super-menu-tab; animation: uk-animation-fade">
+              {%- for second_link in link.links -%}
+                <li>
+                  <a class="uk-text-uppercase tm-tab-left" href="#">{{ second_link.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          <div class="uk-width-expand">
+            <ul id="js-super-menu-tab" class="uk-switcher">
+              {%- for second_link in link.links -%}
+                <li>
+                  <ul class="uk-nav uk-column-1-2">
+                    {% for third_link in second_link.links %}
+                      <li class="{%- if third_link.active -%} uk-active {%- endif -%}">
+                        <a class="uk-text-capitalize tm-child-link" href="{{ third_link.url }}">
+                          {% assign my_sup_array = third_link.title | split: "^" %}
+                          {{ my_sup_array.first | escape }}
+                          {%- if my_sup_array.size == 2 -%}
+                            <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
+                          {%- endif -%}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      {% else %}
+        {% comment %}不存在三级菜单时{% endcomment %}
+        <ul class="uk-nav uk-flex uk-flex-center">
+          {%- for second_link in link.links -%}
+            <li class="{%- if second_link.active -%} uk-active {%- endif -%}">
+              <a class="tm-child-link" href="{{ second_link.url }}">
+                {% assign my_sup_array = second_link.title | split: "^" %}
+                {{ my_sup_array.first | escape }}
+                {%- if my_sup_array.size == 2 -%}
+                  <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
+                {%- endif -%}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</li>

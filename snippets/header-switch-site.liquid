@@ -1,0 +1,29 @@
+{%- assign sites_links = linklists['site-links'].links -%}
+{%- assign first_link = sites_links[0] -%}
+{%- assign first_flag_string = sites_links[0].title | split: "^" -%}
+{%- assign first_flag = first_flag_string | first | downcase | prepend: 'flag-' -%}
+
+{%- if sites_links != blank -%}
+  <a class="uk-navbar-toggle uk-visible@m" href="javascript:;">
+    {% render 'icons', icon: first_flag, width: '26', height: '26' %}
+  </a>
+  {%- if sites_links.size > 0 -%}
+    <div class="uk-navbar-dropdown uk-margin-remove uk-padding-remove" uk-dropdown="animation: uk-animation-slide-top-small; duration: 500;">
+      <ul class="uk-nav uk-nav-default uk-padding-small">
+        {% for s_link in first_link.links %}
+          {% assign s_link_array = s_link.title | split: "^" %}
+          {%- assign flag = s_link_array | first | downcase | prepend: 'flag-' -%}
+          <li class="{% if s_link.active %} uk-active {% endif %}">
+            <a class="uk-text-500 tm-c-link" href="{{ s_link.url }}" target="_blank" rel="noopener">
+              {% render 'icons', icon: flag, width: '26', height: '26' %}
+              <span class="uk-margin-small-left">{{ s_link_array.last | escape }}</span>
+            </a>
+          </li>
+          {%- unless forloop.last -%}
+            <li class="uk-nav-divider"></li>
+          {%- endunless -%}
+        {% endfor %}
+      </ul>
+    </div>
+  {%- endif -%}
+{%- endif -%}

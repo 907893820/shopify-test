@@ -1,0 +1,133 @@
+<!-- {%- assign header_csses = 'header' -%} -->
+{% comment %}{%- assign header_js = 'countdown' -%}{% endcomment %}
+{% comment %}异步加载css{% endcomment %}
+{% comment %}{%- render 'async-css', file_names: header_csses -%}{% endcomment %}
+{{ 'section-header.min.css' | asset_url | stylesheet_tag }}
+{% comment %}异步加载js{% endcomment %}
+{% comment %}{%- render 'async-js', file_names: header_js -%}{% endcomment %}
+
+{% comment %} 页头导航 {% endcomment %}
+<section class="uk-position-relative uk-position-z-index tm-header tm-header--{{ template.name }}" role="banner">
+  {%- comment -%} 公告 {%- endcomment -%}
+  {%- render 'header-announcement' -%}
+  {%- comment -%} 导航栏 {%- endcomment -%}
+  {% comment %}
+    固定显示头部导航
+    {% if template != 'page.wholesale' %}uk-sticky{% endif %}
+  {% endcomment %}
+  <div class="uk-navbar-container uk-navbar-transparent">
+    <div class="uk-flex uk-container uk-container-expand" uk-navbar>
+      {%- comment -%} Header logo {%- endcomment -%}
+      {%- render 'header-logo', no_nav_offcanvas: true -%}
+      {%- comment -%} 电脑端导航菜单 {%- endcomment -%}
+      {%- render 'header-navigation' -%}
+      {%- comment -%} Header right {%- endcomment -%}
+      {%- render 'header-right' -%}
+    </div>
+  </div>
+</section>
+{%- comment -%} 手机端导航 {%- endcomment -%}
+{%- render 'header-nav-offcanvas' -%}
+{% comment %} 网站标记 {% endcomment %}
+{% render 'microdata-schema' %}
+
+{% schema %}
+{
+"name": "页头配置",
+"tag": "section",
+"max_blocks": 10,
+"settings": [
+{
+"type": "header",
+"content": "导航配置"
+},
+{
+"type": "checkbox",
+"id": "enable_super_menu",
+"label": "是否启用超级导航?",
+"default": true,
+"info": "要添加超级导航，请单击添加内容。"
+},
+{
+"type": "header",
+"content": "公告栏配置"
+},
+{
+"type": "checkbox",
+"id": "announcement_bar_enabled",
+"label": "是否显示公告栏?",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "announcement_bar_home_page_only",
+"label": "是否仅显示在首页上?",
+"default": true
+},
+{
+"type": "liquid",
+"id": "announcement_content",
+"label": "内容"
+},
+{
+"type": "header",
+"content": "搜索配置"
+},
+{
+"type": "checkbox",
+"id": "enable_search",
+"label": "是否开启搜索框?",
+"default": true
+},
+{
+"type": "header",
+"content": "页头配置"
+},
+{
+"type": "image_picker",
+"id": "logo",
+"label": "网站Logo"
+},
+{
+"type": "link_list",
+"id": "menu",
+"label": "网站菜单",
+"default": "main-menu"
+}
+],
+"blocks": [
+{
+"type": "menu",
+"name": "超级导航",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "超级导航标签"
+},
+{
+"type": "header",
+"content": "布局配置"
+},
+{
+"type": "text",
+"id": "super_navigation",
+"label": "超级导航触发",
+"info": "添加您想要变成超级导航菜单的标题"
+},
+{
+"type": "color",
+"id": "super_menu_bg_color",
+"label": "导航背景颜色",
+"default": "#ffffff"
+},
+{
+"type": "liquid",
+"id": "super_menu_liquid",
+"label": "自定义超级菜单内容"
+}
+]
+}
+]
+}
+{% endschema %}

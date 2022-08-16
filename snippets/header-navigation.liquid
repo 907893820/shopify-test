@@ -1,0 +1,92 @@
+{%- comment -%} 电脑端导航 {%- endcomment -%}
+{%- assign menu = section.settings.menu -%}
+<nav class="uk-navbar-center uk-visible@l">
+  <ul class="uk-navbar-nav">
+    {%- comment -%} 网站导航栏 {%- endcomment -%}
+    {%- for link in linklists[menu].links  -%}
+      {% comment %}一级菜单句柄{% endcomment %}
+      {%- assign submenu = link.title | handleize -%}
+      {% comment %}获取一级菜单下的二级菜单{% endcomment %}
+      {%- assign submenu_links = linklists[submenu].links -%}
+      {% comment %}获取二级菜单的数量{% endcomment %}
+      {%- assign submenu_size = submenu_links.size -%}
+      {%- if submenu_size > 0 -%}
+        {%- comment -%} 存在二级菜单 {%- endcomment -%}
+        {%- if section.settings.enable_super_menu == false -%}
+          {%- render 'header-dropdown-menu', link: link -%}
+        {%- else -%}
+          {%- assign have_super_menu = false -%}
+          {%- for block in section.blocks -%}
+            {%- assign super_menu_handle = block.settings.super_navigation | downcase -%}
+            {%- assign link_title = link.title | downcase -%}
+            {%- if super_menu_handle == link_title -%}
+              {%- assign have_super_menu = true -%}
+              {%- if have_super_menu -%}
+                <li class="{%- if link.active or link.child_active -%} uk-active {%- endif -%}" {{ block.shopify_attributes }}>
+                  <a href="{{ link.url }}" uk-icon="icon: chevron-down;ratio: 0.8;">
+                    {% assign my_sup_array = link.title | split: "^" %}
+                    {{ my_sup_array.first | escape }}
+                    {%- if my_sup_array.size == 2 -%}
+                      <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
+                    {%- endif -%}
+                  </a>
+                  {%- render 'header-super-menu', block: block -%}
+                </li>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- unless have_super_menu == true -%}
+            {%- render 'header-dropdown-menu', link: link -%}
+          {%- endunless -%}
+        {%- endif -%}
+      {%- else -%}
+        {%- comment -%} 没有二级菜单 {%- endcomment -%}
+        {%- if section.settings.enable_super_menu == false -%}
+          <li class="{%- if link.active -%} uk-active {%- endif -%}">
+            <a href="{{ link.url }}">
+              {% assign my_sup_array = link.title | split: "^" %}
+              {{ my_sup_array.first | escape }}
+              {%- if my_sup_array.size == 2 -%}
+                <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
+              {%- endif -%}
+            </a>
+          </li>
+        {%- else -%}
+          {%- assign have_super_menu = false -%}
+          {%- for block in section.blocks -%}
+            {%- assign super_menu_handle = block.settings.super_navigation | downcase -%}
+            {%- assign link_title = link.title | downcase -%}
+            {%- if super_menu_handle == link_title -%}
+              {%- assign have_super_menu = true -%}
+              {%- if have_super_menu == true -%}
+                {%- assign number = forloop.index | plus: 1 -%}
+                <li class="{%- if link.active or link.child_active -%} uk-active {%- endif -%}" {{ block.shopify_attributes }}>
+                  <a href="{{ link.url }}" uk-icon="icon: chevron-down;ratio: 0.8;">
+                    {% assign my_sup_array = link.title | split: "^" %}
+                    {{ my_sup_array.first | escape }}
+                    {%- if my_sup_array.size == 2 -%}
+                      <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
+                    {%- endif -%}
+                  </a>
+                  {%- render 'header-super-menu', block: block -%}
+                </li>
+                {%- break -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- unless have_super_menu == true -%}
+            <li class="{%- if link.active -%} uk-active {%- endif -%}">
+              <a href="{{ link.url }}">
+                {% assign my_sup_array = link.title | split: "^" %}
+                {{ my_sup_array.first | escape }}
+                {%- if my_sup_array.size == 2 -%}
+                  <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
+                {%- endif -%}
+              </a>
+            </li>
+          {%- endunless -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</nav>

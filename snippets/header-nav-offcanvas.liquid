@@ -1,0 +1,94 @@
+{% comment %}手机端主菜单{% endcomment %}
+{%- assign mobile_menu = section.settings.menu -%}
+
+<div id="nav-offcanvas" uk-offcanvas="overlay: true;flip: true;">
+  <aside class="uk-offcanvas-bar uk-padding-remove">
+    <div class="uk-card uk-card-small">
+      <header class="uk-card-header uk-flex uk-flex-middle tm-offcanvas-header">
+        <div class="uk-width-1 uk-flex uk-flex-between">
+          {% render 'header-logo' %}
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+        </div>
+      </header>
+      {%- if mobile_menu != blank -%}
+        <nav class="uk-card-small uk-card-body">
+          <ul class="uk-nav-default uk-nav-parent-icon uk-list-divider" uk-nav>
+            {%- for link in linklists[mobile_menu].links -%}
+              {%- if link.links != blank -%}
+                <li class="uk-parent {% if link.active or link.child_active %} uk-active {% endif %}">
+                  <a class="uk-text-600 uk-text-capitalize uk-text-small uk-text-emphasis" href="{{ link.url }}">
+                    {% assign my_sup_array = link.title | split: "^" %}
+                    {{ my_sup_array.first | escape }}
+                    {%- if my_sup_array.size == 2 -%}
+                      <sup class="uk-text-danger">{{ my_sup_array.last }}</sup>
+                    {%- endif -%}
+                  </a>
+                  <ul class="uk-nav-sub uk-list-divider" style="padding-left: 14px;padding-right: 20px;">
+                    {%- for childlink in link.links -%}
+                    {%- assign child_links = childlink.links -%}
+                      {%- if child_links != blank -%}
+                        <li>
+                          <ul class="uk-nav uk-nav-parent-icon" uk-nav>
+                            <li class="uk-parent">
+                              <a class="uk-text-600 uk-text-capitalize uk-text-small uk-text-emphasis" href="#">
+                                {% assign my_sup_array = childlink.title | split: "^" %}
+                                {{ my_sup_array.first | escape }}
+                                {%- if my_sup_array.size == 2 -%}
+                                  <sup class="uk-text-danger">{{ my_sup_array.last }}</sup>
+                                {%- endif -%}
+                              </a>
+                              <ul class="uk-nav-sub uk-list-divider" style="padding-left: 10px;">
+                                {%- for three_link in child_links -%}
+                                  <li class="{%- if three_link.active or three_link.child_active -%} uk-active {%- endif -%}">
+                                    <a class="uk-text-500 uk-text-small uk-text-capitalize" href="{{ three_link.url }}">
+                                      {% assign my_sup_array = three_link.title | split: "^" %}
+                                      {{ my_sup_array.first | escape }}
+                                      {%- if my_sup_array.size == 2 -%}
+                                        <sup class="uk-text-danger">{{ my_sup_array.last }}</sup>
+                                      {%- endif -%}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      {%- else -%}
+                        <li class="{%- if childlink.active -%} uk-active {%- endif -%}">
+                          <ul class="uk-nav uk-nav-parent-icon" uk-nav>
+                            <li>
+                              <a class="uk-text-500 uk-text-small uk-text-capitalize" href="{{ childlink.url }}">
+                                {% assign my_sup_array = childlink.title | split: "^" %}
+                                {{ my_sup_array.first | escape }}
+                                {%- if my_sup_array.size == 2 -%}
+                                  <sup class="uk-text-danger">{{ my_sup_array.last }}</sup>
+                                {%- endif -%}
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      {%- endif -%}
+                      {% comment %}<li class="{%- if childlink.active -%} uk-active {%- endif -%}">{% endcomment %}
+                        {% comment %}<a class="uk-text-500" href="{{ childlink.url }}">{{ childlink.title }}</a>{% endcomment %}
+                      {% comment %}</li>{% endcomment %}
+                    {%- endfor -%}
+                  </ul>
+                </li>
+              {%- else -%}
+                <li class="{%- if link.active -%} uk-active {%- endif -%}">
+                  <a class="uk-text-600 uk-text-capitalize uk-text-small uk-text-emphasis" href="{{ link.url }}">
+                    {% assign my_sup_array = link.title | split: "^" %}
+                    {{ my_sup_array.first | escape }}
+                    {%- if my_sup_array.size == 2 -%}
+                      <sup class="uk-text-danger">{{ my_sup_array.last }}</sup>
+                    {%- endif -%}
+                  </a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </nav>
+      {%- endif -%}
+    </div>
+  </aside>
+</div>

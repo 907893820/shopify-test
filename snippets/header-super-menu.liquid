@@ -1,0 +1,11 @@
+{% assign b_s = block.settings %}
+{% comment %}背景颜色{% endcomment %}
+{% capture bg_color %}
+  style="background: {{ b_s.super_menu_bg_color }}"
+{% endcapture %}
+
+{%- if b_s.super_menu_liquid != blank -%}
+  <div class="uk-navbar-dropdown uk-margin-remove" {{ bg_color}} uk-drop="pos: bottom-justify;delay-show: 125;boundary: .tm-header;boundary-align: true;flip: x;animation: uk-animation-slide-top-small;">
+    {{ b_s.super_menu_liquid }}
+  </div>
+{%- endif -%}

@@ -1,0 +1,23 @@
+{% comment %} 网站Logo {% endcomment %}
+
+{%- capture logo_template -%}
+  <a class="uk-navbar-item uk-logo" href="/">
+    {%- if section.settings.logo != blank -%}
+      <img class="tm-logo" data-src="//cdn.shopify.com/s/files/1/0536/3390/8911/files/logo.svg?v=1637049697" width="130" height="39" alt="{{ section.settings.logo.alt | default: shop.name }}" uk-img>
+    {%- else -%}
+      {{ shop.name }}
+    {%- endif -%}
+  </a>
+{%- endcapture -%}
+
+<div class="uk-navbar-left">
+  {%- if request.page_type == 'index' -%}
+    <h1 class="uk-margin-remove">
+      {{ logo_template }}
+    </h1>
+  {%- else -%}
+    <div class="h1">
+      {{ logo_template }}
+    </div>
+  {%- endif -%}
+</div>

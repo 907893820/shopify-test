@@ -1,0 +1,28 @@
+{%- comment -%} 导航基础下拉栏 {%- endcomment -%}
+<li class="{%- if link.active or link.child_active -%} uk-active {%- endif -%}">
+  <a href="{{ link.url }}" uk-icon="icon: chevron-down;ratio: 0.8;">
+    {% assign my_sup_array = link.title | split: "^" %}
+    {{ my_sup_array.first | escape }}
+    {%- if my_sup_array.size == 2 -%}
+      <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
+    {%- endif -%}
+  </a>
+  <div class="uk-navbar-dropdown uk-margin-remove uk-padding-remove" uk-dropdown="animation: uk-animation-slide-top-small; duration: 500;">
+    <ul class="uk-nav uk-nav-default uk-padding-small">
+      {% for c_link in link.links %}
+        <li class="{% if c_link.active %} uk-active {% endif %}">
+          <a class="tm-c-link" href="{{ c_link.url }}" title="{{ c_link.title }}">
+            {% assign c_link_array = c_link.title | split: "^" %}
+            {{ c_link_array.first | escape }}
+            {%- if c_link_array.size == 2 -%}
+              <sup class="uk-text-danger uk-text-600">{{ c_link_array.last }}</sup>
+            {%- endif -%}
+          </a>
+        </li>
+        {%- unless forloop.last -%}
+          <li class="uk-nav-divider"></li>
+        {%- endunless -%}
+      {% endfor %}
+    </ul>
+  </div>
+</li>

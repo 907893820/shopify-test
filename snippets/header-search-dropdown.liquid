@@ -1,0 +1,18 @@
+{% if section.settings.enable_search and request.page_type != "search" %}
+  <a class="uk-navbar-toggle uk-visible@s" href="javascript:;" uk-search-icon></a>
+  <div class="uk-navbar-dropdown uk-padding-remove uk-margin-remove" uk-drop="mode: click; animation: uk-animation-slide-top-small;duration: 300; cls-drop: uk-navbar-dropdown;boundary: .tm-header;boundary-align: true;pos: bottom-justify;flip: x;">
+    <div class="uk-margin-auto uk-container-xsmall uk-border-rounded uk-padding-small uk-section-default">
+      <div class="uk-grid-collapse uk-flex-middle" uk-grid>
+        <div class="uk-width-expand">
+          <form class="uk-search uk-search-navbar uk-width-1-1" action="/search" method="get" role="search">
+            <input type="hidden" name="type" value="product">
+            <input class="uk-search-input" type="search" name="q" placeholder="search" value="{{ search.terms | escape }}" autocomplete="off" autofocus>
+          </form>
+        </div>
+        <div class="uk-width-auto uk-margin-small-left">
+          <a class="uk-navbar-dropdown-close" href="#" uk-close></a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
