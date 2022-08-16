@@ -16,7 +16,8 @@
 }
 
 .index_new_swiper .uk-position-relative h2,
-.index_new_swiper .uk-position-relative h3 {
+.index_new_swiper .uk-position-relative h3,
+.index_new_swiper .uk-position-relative p {
   color: white;
 }
 
@@ -46,11 +47,35 @@
   text-transform: capitalize;
 }
 
+.index_new_swiper .uk-button:hover {
+  background: #10b5ec;
+  border: 1px solid #10b5ec;
+}
+
 .index_new_swiper .text_position {
   width: 100%;
   max-width: 1200px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.index_new_swiper .uk-dotnav * * {
+  border: none;
+  width: 50px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 0.5vw;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.index_new_swiper .uk-dotnav .uk-active * {
+  width: 70px;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .index_new_swiper .position_topLeft {
