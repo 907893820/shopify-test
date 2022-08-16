@@ -131,9 +131,9 @@
             "type": "menu",
             "settings": {
               "title": "标签",
-              "super_navigation": "click",
-              "super_menu_bg_color": "#a35959",
-              "super_menu_liquid": "dsadasdasd"
+              "super_navigation": "产品目录",
+              "super_menu_bg_color": "#ecd7d7",
+              "super_menu_liquid": "<sup>123<\/sup><br>\n<h3>h3<\/h3>"
             }
           },
           "773e7bc0-080f-464a-bf92-e05f2841ad17": {
@@ -144,18 +144,29 @@
               "super_menu_bg_color": "#ffffff",
               "super_menu_liquid": "1231as2d31sdasd"
             }
+          },
+          "ab1b6db6-dcda-45b7-a82b-36a21da6053f": {
+            "type": "menu",
+            "settings": {
+              "title": "",
+              "super_navigation": "",
+              "super_menu_bg_color": "#ffffff",
+              "super_menu_liquid": ""
+            }
           }
         },
         "block_order": [
           "83268853-b0ed-4140-a84f-25a3f7d63ec2",
-          "773e7bc0-080f-464a-bf92-e05f2841ad17"
+          "773e7bc0-080f-464a-bf92-e05f2841ad17",
+          "ab1b6db6-dcda-45b7-a82b-36a21da6053f"
         ],
         "settings": {
           "enable_super_menu": true,
-          "announcement_bar_enabled": true,
+          "announcement_bar_enabled": false,
           "announcement_bar_home_page_only": true,
-          "announcement_content": "",
-          "enable_search": true,
+          "announcement_content": "dasdasdasdas",
+          "enable_search": false,
+          "logo": "shopify:\/\/shop_images\/09fcde363f7560d536390fde45352324.jpg",
           "menu": "main-menu"
         }
       },
