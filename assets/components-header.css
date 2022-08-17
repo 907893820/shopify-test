@@ -1,0 +1,34 @@
+.section-whole-header {
+  transition: all 0.15s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.section-whole-header .header-content {
+  justify-content: space-between;
+}
+
+.section-whole-header .header-content .uk-navbar-right {
+  margin-left: 0;
+}
+
+.section-whole-header .header-content * {
+  color: white;
+}
+
+.section-whole-header .uk-navbar-nav li.uk-active a {
+  color: white;
+}
+
+.section-whole-header:hover {
+  background-color: white;
+}
+
+.section-whole-header:hover .uk-navbar-nav li a {
+  color: #323232;
+}
+
+.section-whole-header:hover .header-content * {
+  color: #323232;
+}

@@ -1,0 +1,38 @@
+.section-whole-header{
+    transition: all 0.15s;
+    .header-content{
+        justify-content: space-between;
+        .uk-navbar-right{
+            margin-left: 0;
+        }
+    }
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .header-content *{
+        color: white;
+    }
+    .uk-navbar-nav{
+        li.uk-active{
+            a{
+                color: white;
+            }
+        }
+    }
+    
+    &:hover{
+        background-color: white;
+        .uk-navbar-nav{
+            li{
+                a{
+                    color: #323232;
+                }
+            }
+        }
+        .header-content *{
+            color: #323232;
+        }
+    }
+
+}

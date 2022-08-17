@@ -3,7 +3,7 @@
 <nav class="uk-navbar-center uk-visible@l">
   <ul class="uk-navbar-nav">
     {%- comment -%} 网站导航栏 {%- endcomment -%}
-    {%- for link in linklists[menu].links  -%}
+    {%- for link in linklists[menu].links  -%} 
       {% comment %}一级菜单句柄{% endcomment %}
       {%- assign submenu = link.title | handleize -%}
       {% comment %}获取一级菜单下的二级菜单{% endcomment %}
