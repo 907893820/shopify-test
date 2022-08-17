@@ -37,7 +37,7 @@
           {%- endif -%}
           <div class="uk-position-absolute tm-content text_position position_{{ b.text_position }}">
             {%- if b.slider-content-image != blank -%}
-              <div data-src="{{ b.slider-content-image }}" uk-img></div>
+              <div data-src="{{ b.slider-content-image }}" uk-img><span></span></div>
             {%- elsif b.title != blank -%}
               <h2 class="uk-h1 uk-text-600 uk-margin-small tm-title">{{ b.title }}</h2>
             {%- endif -%}
