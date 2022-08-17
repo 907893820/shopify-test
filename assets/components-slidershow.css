@@ -78,6 +78,11 @@
   background-color: white;
 }
 
+.index_new_swiper .uk-slideshow-items {
+  min-height: 800px !important;
+  max-height: 800px !important;
+}
+
 .index_new_swiper .position_topLeft {
   top: 7.25vw;
   text-align: left;

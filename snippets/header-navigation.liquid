@@ -22,10 +22,12 @@
             {%- if super_menu_handle == link_title -%}
               {%- assign have_super_menu = true -%}
               {%- if have_super_menu -%}
-                <li class="{%- if link.active or link.child_active -%} uk-active {%- endif -%}" {{ block.shopify_attributes }}>
+                {% comment %} <li class="{%- if link.active or link.child_active -%} uk-active {%- endif -%}" {{ block.shopify_attributes }}> {% endcomment %}
+                <li class=" {{ block.shopify_attributes }}>
                   <a href="{{ link.url }}" uk-icon="icon: chevron-down;ratio: 0.8;">
                     {% assign my_sup_array = link.title | split: "^" %}
                     {{ my_sup_array.first | escape }}
+                    <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 13 4 7"></polyline></svg>
                     {%- if my_sup_array.size == 2 -%}
                       <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
                     {%- endif -%}
@@ -42,7 +44,8 @@
       {%- else -%}
         {%- comment -%} 没有二级菜单 {%- endcomment -%}
         {%- if section.settings.enable_super_menu == false -%}
-          <li class="{%- if link.active -%} uk-active {%- endif -%}">
+          {% comment %} <li class="{%- if link.active -%} uk-active {%- endif -%}"> {% endcomment %}
+          <li>
             <a href="{{ link.url }}">
               {% assign my_sup_array = link.title | split: "^" %}
               {{ my_sup_array.first | escape }}
@@ -60,10 +63,12 @@
               {%- assign have_super_menu = true -%}
               {%- if have_super_menu == true -%}
                 {%- assign number = forloop.index | plus: 1 -%}
-                <li class="{%- if link.active or link.child_active -%} uk-active {%- endif -%}" {{ block.shopify_attributes }}>
+                {% comment %} <li class="{%- if link.active or link.child_active -%} uk-active {%- endif -%}" {{ block.shopify_attributes }}> {% endcomment %}
+                <li {{ block.shopify_attributes }}>
                   <a href="{{ link.url }}" uk-icon="icon: chevron-down;ratio: 0.8;">
                     {% assign my_sup_array = link.title | split: "^" %}
                     {{ my_sup_array.first | escape }}
+                    <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 13 4 7"></polyline></svg>
                     {%- if my_sup_array.size == 2 -%}
                       <sup class="uk-text-danger uk-text-600">{{ my_sup_array.last }}</sup>
                     {%- endif -%}
@@ -75,7 +80,8 @@
             {%- endif -%}
           {%- endfor -%}
           {%- unless have_super_menu == true -%}
-            <li class="{%- if link.active -%} uk-active {%- endif -%}">
+            {% comment %} <li class="{%- if link.active -%} uk-active {%- endif -%}"> {% endcomment %}
+            <li>
               <a href="{{ link.url }}">
                 {% assign my_sup_array = link.title | split: "^" %}
                 {{ my_sup_array.first | escape }}

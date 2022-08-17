@@ -1,5 +1,5 @@
 .section-whole-header{
-    transition: all 0.15s;
+    transition: all 0.3s ease-in-out;
     .header-content{
         justify-content: space-between;
         .uk-navbar-right{
@@ -10,17 +10,31 @@
     top: 0;
     width: 100%;
 
-    .header-content *{
-        color: white;
-    }
-    .uk-navbar-nav{
-        li.uk-active{
-            a{
-                color: white;
-            }
+    .header-content{
+        .uk-icon,.uk-navbar-toggle{
+            color: white;
         }
     }
     
+    .uk-navbar-nav{
+        li{
+            a{
+                text-transform: capitalize;
+            }
+            .uk-icon{
+                svg{
+                    transition: 0.3s ease-in-out;
+                }
+            }
+            &:hover{
+                .uk-icon{
+                    svg{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
     &:hover{
         background-color: white;
         .uk-navbar-nav{

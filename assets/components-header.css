@@ -1,5 +1,5 @@
 .section-whole-header {
-  transition: all 0.15s;
+  transition: all 0.3s ease-in-out;
   position: fixed;
   top: 0;
   width: 100%;
@@ -13,12 +13,20 @@
   margin-left: 0;
 }
 
-.section-whole-header .header-content * {
+.section-whole-header .header-content .uk-icon, .section-whole-header .header-content .uk-navbar-toggle {
   color: white;
 }
 
-.section-whole-header .uk-navbar-nav li.uk-active a {
-  color: white;
+.section-whole-header .uk-navbar-nav li a {
+  text-transform: capitalize;
+}
+
+.section-whole-header .uk-navbar-nav li .uk-icon svg {
+  transition: 0.3s ease-in-out;
+}
+
+.section-whole-header .uk-navbar-nav li:hover .uk-icon svg {
+  transform: rotate(90deg);
 }
 
 .section-whole-header:hover {

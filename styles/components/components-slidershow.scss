@@ -94,6 +94,10 @@ $btn-hover-border: 1px solid $btn-hover-background;
       }
     }
   }
+  .uk-slideshow-items{
+    min-height: 800px !important;
+    max-height: 800px !important;     
+  }
 
   
   .position_topLeft{
