@@ -36,7 +36,9 @@
             <a class="uk-position-cover" href="{{ b.btn_url }}" rel="noopener"></a>
           {%- endif -%}
           <div class="uk-position-absolute tm-content text_position position_{{ b.text_position }}">
-            {%- if b.title != blank -%}
+            {%- if b.slider-content-image != blank -%}
+              <div data-src="{{ b.slider-content-image }}" uk-img></div>
+            {%- elsif b.title != blank -%}
               <h2 class="uk-h1 uk-text-600 uk-margin-small tm-title">{{ b.title }}</h2>
             {%- endif -%}
             {%- if b.subtitle != blank -%}
@@ -162,6 +164,11 @@
           "info": "配置文案的内容展示"
         },
         {
+          "type":"image_picker",
+          "id":"slider-content-image",
+          "label": "轮播图内容中的图片(视作标题,如有图片，则不显示标题)",
+        },
+        {
           "type": "text",
           "id": "title",
           "label": "标题"
@@ -205,6 +212,7 @@
           "label": "按钮2跳转地址",
           "info": "不填则不显示"
         },
+        
         {
           "type":"select",
           "id":"text_position",

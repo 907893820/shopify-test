@@ -1,23 +1,21 @@
 .section-whole-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
     transition: all 0.3s ease-in-out;
     .header-content{
+        max-width: 1208px;
         justify-content: space-between;
         .uk-navbar-right{
             margin-left: 0;
         }
-    }
-    position: fixed;
-    top: 0;
-    width: 100%;
-
-    .header-content{
         .uk-icon,.uk-navbar-toggle{
             color: white;
         }
     }
-    
     .uk-navbar-nav{
         li{
+            border-bottom: 2px solid transparent;
             a{
                 text-transform: capitalize;
             }
@@ -27,6 +25,7 @@
                 }
             }
             &:hover{
+                border-bottom: 2px solid #000;
                 .uk-icon{
                     svg{
                         transform: rotate(90deg);
