@@ -40,7 +40,7 @@
         display: flex;
         max-width: 1208px;
         margin: auto;
-        .super-menu__shop-list , .super-menu__new-shop-list{
+        .super-menu__shop-list{
             display: flex;
             flex-wrap: wrap;
             flex: 1;
@@ -60,12 +60,6 @@
                     margin: 0;
                 }
             }
-            .super-menu__shop-image{
-                width: 86px;
-                height: 86px;
-                margin-right: 0.5rem;
-                background-size: cover;
-            } 
             .super-menu__new-shop-list{
                 width: 20%;
             }
@@ -74,6 +68,12 @@
         .super-menu__new-shop-list{
             width: 20%;
         }
+        .super-menu__shop-image{
+            width: 86px;
+            height: 86px;
+            margin-right: 0.5rem;
+            background-size: cover;
+        } 
     }
     
     &:hover{

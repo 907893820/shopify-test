@@ -44,43 +44,43 @@
   margin: auto;
 }
 
-.section-whole-header .super-menu-dropdown .super-menu__shop-list, .section-whole-header .super-menu-dropdown .super-menu__new-shop-list {
+.section-whole-header .super-menu-dropdown .super-menu__shop-list {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
   border-right: 1px solid #e8e8e8;
 }
 
-.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-item, .section-whole-header .super-menu-dropdown .super-menu__new-shop-list .super-menu__shop-item {
+.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-item {
   width: 25%;
   display: flex;
   margin-top: 20px;
 }
 
-.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-item h3, .section-whole-header .super-menu-dropdown .super-menu__new-shop-list .super-menu__shop-item h3 {
+.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
 }
 
-.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-item p, .section-whole-header .super-menu-dropdown .super-menu__new-shop-list .super-menu__shop-item p {
+.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-item p {
   font-size: 16px;
   margin: 0;
 }
 
-.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-image, .section-whole-header .super-menu-dropdown .super-menu__new-shop-list .super-menu__shop-image {
-  width: 86px;
-  height: 86px;
-  margin-right: 0.5rem;
-  background-size: cover;
-}
-
-.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__new-shop-list, .section-whole-header .super-menu-dropdown .super-menu__new-shop-list .super-menu__new-shop-list {
+.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__new-shop-list {
   width: 20%;
 }
 
 .section-whole-header .super-menu-dropdown .super-menu__new-shop-list {
   width: 20%;
+}
+
+.section-whole-header .super-menu-dropdown .super-menu__shop-image {
+  width: 86px;
+  height: 86px;
+  margin-right: 0.5rem;
+  background-size: cover;
 }
 
 .section-whole-header:hover {
