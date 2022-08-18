@@ -4,17 +4,17 @@
   style="background: {{ b_s.super_menu_bg_color }}"
 {% endcapture %}
 
-{%- if b_s.product_list != blank -%}
+{%- if b_s.collection_list != blank -%}
   <div class="uk-navbar-dropdown uk-margin-remove" {{ bg_color}} uk-drop="pos: bottom-justify;delay-show: 125;boundary: .tm-header;boundary-align: true;flip: x;animation: uk-animation-slide-top-small;">
     {% comment %} {{ b_s.super_menu_liquid }} {% endcomment %}
     <div class="super-menu-dropdown">
       <div class="super-menu__shop-list">
-      {%- for block in b_s.product_list -%}
+      {%- for block in b_s.collection_list -%}
         <div class="super-menu__shop-item">   
           <div class="super-menu__shop-image" {% if block.featured_image != blank %} data-src="{{ block.featured_image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
           <div>
             <h3>{{ block.title }}</h3>
-            {%- for variant in block.variants limit:5-%}
+            {%- for variant in block.products limit:5-%}
             <p>{{ variant.title }}</p>
             {%- endfor -%}
           </div>

@@ -30,12 +30,12 @@
   transition: 0.3s ease-in-out;
 }
 
-.section-whole-header .uk-navbar-nav li:hover {
-  border-bottom: 2px solid #000;
-}
-
 .section-whole-header .uk-navbar-nav li:hover .uk-icon svg {
   transform: rotate(90deg);
+}
+
+.section-whole-header .uk-navbar-nav li.hover-border-bottom:hover {
+  border-bottom: 2px solid #000;
 }
 
 .section-whole-header .super-menu-dropdown {
