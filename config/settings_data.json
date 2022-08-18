@@ -133,10 +133,9 @@
               "title": "SHOP",
               "super_navigation": "shop",
               "super_menu_bg_color": "#ffffff",
-              "product_list": [
-
-              ],
-              "new_product": ""
+              "collection_list": [
+                "frontpage"
+              ]
             }
           }
         },
