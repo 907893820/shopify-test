@@ -11,6 +11,7 @@
       {% comment %}获取二级菜单的数量{% endcomment %}
       {%- assign submenu_size = submenu_links.size -%}
       {%- if submenu_size > 0 -%}
+        
         {%- comment -%} 存在二级菜单 {%- endcomment -%}
         {%- if section.settings.enable_super_menu == false -%}
           {%- render 'header-dropdown-menu', link: link -%}

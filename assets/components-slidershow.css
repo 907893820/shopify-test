@@ -83,6 +83,13 @@
   max-height: 800px !important;
 }
 
+.index_new_swiper .slider-content-image {
+  width: 350px;
+  height: 135px;
+  display: inline-block;
+  background-size: cover;
+}
+
 .index_new_swiper .position_topLeft {
   top: 7.25vw;
   text-align: left;
