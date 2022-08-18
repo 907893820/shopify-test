@@ -72,6 +72,22 @@
   width: 20%;
 }
 
+.section-whole-header .super-menu-dropdown .super-menu__new-shop-list .super-menu__new_shop-ite {
+  display: flex;
+  margin-top: 20px;
+}
+
+.section-whole-header .super-menu-dropdown .super-menu__new-shop-list h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.section-whole-header .super-menu-dropdown .super-menu__new-shop-list p {
+  font-size: 16px;
+  margin: 0;
+}
+
 .section-whole-header .super-menu-dropdown .super-menu__shop-image {
   width: 86px;
   height: 86px;

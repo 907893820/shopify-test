@@ -23,7 +23,7 @@
       </div>
       <div class="super-menu__new-shop-list">
         {%- for block in b_s.new_collection_list -%}
-          <div >
+          <div class="super-menu__new_shop-item">
             <div class="super-menu__shop-image" {% if block.featured_image != blank %} data-src="{{ block.featured_image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
             <div>
               <h3>{{ block.title }}</h3>

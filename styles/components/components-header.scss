@@ -67,6 +67,19 @@
         }
         .super-menu__new-shop-list{
             width: 20%;
+            .super-menu__new_shop-ite{
+                display: flex;
+                margin-top: 20px;
+            }
+            h3{
+                font-size: 18px;
+                font-weight: bold;
+                margin: 0;
+            }
+            p{
+                font-size: 16px;
+                margin: 0;
+            }
         }
         .super-menu__shop-image{
             width: 86px;
