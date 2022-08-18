@@ -135,6 +135,9 @@
               "super_menu_bg_color": "#ffffff",
               "collection_list": [
                 "frontpage"
+              ],
+              "new_collection_list": [
+                "新品上市"
               ]
             }
           }
