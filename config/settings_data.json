@@ -134,38 +134,14 @@
               "super_navigation": "shop",
               "super_menu_bg_color": "#ffffff",
               "product_list": [
-                "ep300",
-                "ep500"
-              ]
-            }
-          },
-          "773e7bc0-080f-464a-bf92-e05f2841ad17": {
-            "type": "menu",
-            "settings": {
-              "title": "1231as2d31sdasd",
-              "super_navigation": "1231as2d31sdasd",
-              "super_menu_bg_color": "#ffffff",
-              "product_list": [
 
-              ]
-            }
-          },
-          "ab1b6db6-dcda-45b7-a82b-36a21da6053f": {
-            "type": "menu",
-            "settings": {
-              "title": "",
-              "super_navigation": "",
-              "super_menu_bg_color": "#ffffff",
-              "product_list": [
-
-              ]
+              ],
+              "new_product": ""
             }
           }
         },
         "block_order": [
-          "83268853-b0ed-4140-a84f-25a3f7d63ec2",
-          "773e7bc0-080f-464a-bf92-e05f2841ad17",
-          "ab1b6db6-dcda-45b7-a82b-36a21da6053f"
+          "83268853-b0ed-4140-a84f-25a3f7d63ec2"
         ],
         "settings": {
           "enable_super_menu": true,
