@@ -2,7 +2,6 @@
 {% comment %}{%- assign header_js = 'countdown' -%}{% endcomment %}
 {% comment %}异步加载css{% endcomment %}
 {% comment %}{%- render 'async-css', file_names: header_csses -%}{% endcomment %}
-{{ 'section-header.min.css' | asset_url | stylesheet_tag }}
 {{ 'components-header.css' | asset_url | stylesheet_tag }}
 {% comment %}异步加载js{% endcomment %}
 {% comment %}{%- render 'async-js', file_names: header_js -%}{% endcomment %}
