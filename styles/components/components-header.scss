@@ -34,6 +34,45 @@
             }
         }
     }
+    .super-menu-dropdown{
+        display: flex;
+        max-width: 1208px;
+        margin: auto;
+        .super-menu__shop-list{
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            border-right: 1px solid #e8e8e8;
+            .super-menu__shop-item{
+                width: 25%;
+                display: flex;
+                margin-top: 20px;
+                .super-menu__shop-image{
+                    width: 86px;
+                    height: 86px;
+                    margin-right: 0.5rem;
+                    background-size: cover;
+                } 
+                h3{
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                p{
+                    font-size: 16px;
+                    margin: 0;
+                }
+            }
+            .super-menu__new-shop-list{
+                width: 20%;
+            }
+            
+        }
+        .super-menu__new-shop-list{
+            width: 20%;
+        }
+    }
+    
     &:hover{
         background-color: white;
         .uk-navbar-nav{
