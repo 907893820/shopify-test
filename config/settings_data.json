@@ -146,7 +146,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/eb79e3fc238a2030228cd4e4795aab3f.jpg",
               "title": "新品商品1",
-              "logo": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
+              "logo": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+              "url": "https:\/\/www.baidu.com"
             }
           },
           "ff853433-5045-4db0-99e2-f60df7b50041": {
@@ -154,7 +155,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/09fcde363f7560d536390fde45352324.jpg",
               "title": "新品商品2",
-              "logo": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg"
+              "logo": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
+              "url": "https:\/\/www.jd.com\/"
             }
           }
         },
