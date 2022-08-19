@@ -24,6 +24,12 @@
 
 .section-whole-header .uk-navbar-nav li a {
   text-transform: capitalize;
+  font-size: 14px;
+  text-decoration: none !important;
+}
+
+.section-whole-header .uk-navbar-nav li a:hover, .section-whole-header .uk-navbar-nav li a:hover h3 {
+  color: #00a7e1;
 }
 
 .section-whole-header .uk-navbar-nav li .uk-icon svg {
@@ -64,7 +70,8 @@
   margin: 0;
 }
 
-.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-item p {
+.section-whole-header .super-menu-dropdown .super-menu__shop-list .super-menu__shop-item a {
+  display: block;
   font-size: 16px;
   margin: 0;
 }

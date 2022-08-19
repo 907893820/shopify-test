@@ -15,9 +15,9 @@
             <div class="super-menu__shop-image" {% if block.featured_image != blank %} data-src="{{ block.featured_image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
           </a>
           <div>
-            <h3>{{ block.title }}</h3>
-            {%- for variant in block.products limit:5-%}
-            <p>{{ variant.title }}</p>
+            <a href="{{ block.url }}"><h3>{{ block.title }}</h3></a>
+            {%- for variant in block.products limit: 5 -%}
+            <a href="{{ variant.url }}">{{ variant.title }}</a>
             {%- endfor -%}
           </div>
         </div>
@@ -33,6 +33,7 @@
             </div>
           </div>
         {%- endfor -%}
+        {% comment %} {% render 'header-super-menu-newShopList' %} {% endcomment %}
       </div>
     </div>
   </div>
