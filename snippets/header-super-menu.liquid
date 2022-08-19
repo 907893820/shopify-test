@@ -11,7 +11,9 @@
       <div class="super-menu__shop-list">
       {%- for block in b_s.collection_list -%}
         <div class="super-menu__shop-item">   
-          <div class="super-menu__shop-image" {% if block.featured_image != blank %} data-src="{{ block.featured_image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
+          <a href="{{ block.url }}">
+            <div class="super-menu__shop-image" {% if block.featured_image != blank %} data-src="{{ block.featured_image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
+          </a>
           <div>
             <h3>{{ block.title }}</h3>
             {%- for variant in block.products limit:5-%}
@@ -27,7 +29,7 @@
             <div class="super-menu__shop-image" {% if block.featured_image != blank %} data-src="{{ block.featured_image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
             <div>
               <h3>{{ block.title }}</h3>
-              <p>{{ block.products[0].title }}</p>
+              <div class="new-shop__logo" {% if block.products[0].featured_image != blank %} data-src="{{block.products[0].featured_image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
             </div>
           </div>
         {%- endfor -%}

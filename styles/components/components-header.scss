@@ -45,6 +45,7 @@
             flex-wrap: wrap;
             flex: 1;
             border-right: 1px solid #e8e8e8;
+            margin-right: 20px;
             .super-menu__shop-item{
                 width: 25%;
                 display: flex;
@@ -70,6 +71,11 @@
             .super-menu__new_shop-item{
                 display: flex;
                 margin-top: 20px;
+                .new-shop__logo{
+                    width: 100%;
+                    height: 30px;
+                    background-size: cover;
+                }
             }
             h3{
                 font-size: 18px;
