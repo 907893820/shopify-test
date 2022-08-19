@@ -1,5 +1,5 @@
 {% assign b_s = block.settings %}
-{% assign type = block.type %}
+{% assign newShopList = newShopList %}
 {% comment %}背景颜色{% endcomment %}
 {% capture bg_color %}
   style="background: {{ b_s.super_menu_bg_color }}"
@@ -34,21 +34,23 @@
             </div>
           </div>
         {%- endfor -%} {% endcomment %}
-        {%- for block in section.block -%}
+        {%- for block in newShopList -%}
           {%- case block.type -%}
             {%- when 'newShopList' -%}
-          <a href="{{ block.url }}">
-            <div class="super-menu__new_shop-item">
-              <div class="super-menu__shop-image" {% if block.image != blank %} data-src="{{ block.image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
-              <div>
-                <h3>{{ block.title }}</h3>
-                <div class="new-shop__logo" {% if block.logo != blank %} data-src="{{ block.logo | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
-              </div>
-            </div>
-          </a>
+                {% assign item = block.settings %}
+                {% if item.url != blank %}
+                <a href="{{ item.url }}">
+                  <div class="super-menu__new_shop-item">
+                    <div class="super-menu__shop-image" {% if item.image != blank %} data-src="{{ item.image | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
+                    <div>
+                      <h3>{{ item.title }}</h3>
+                      <div class="new-shop__logo" {% if item.logo != blank %} data-src="{{ item.logo | img_url: 'master' }}" uk-img="loading: eager" {% endif %}><span></span></div>
+                    </div>
+                  </div>
+                </a>
+              {% endif %}
           {% endcase %}
         {%- endfor -%}
-        {% comment %} {% render 'header-super-menu-newShopList' %} {% endcomment %}
       </div>
     </div>
   </div>
