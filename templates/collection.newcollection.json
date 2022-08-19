@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "16608806569480d289": {
+      "type": "slideshow",
+      "blocks": {
+        "1660880656dd256da1-0": {
+          "type": "image",
+          "settings": {
+            "pc_image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "slider-content-image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
+            "title": "321",
+            "subtitle": "312",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
+        },
+        "1660880656dd256da1-1": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
+        }
+      },
+      "block_order": [
+        "1660880656dd256da1-0",
+        "1660880656dd256da1-1"
+      ],
+      "settings": {
+        "enable_margin_top": false,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "animation": "fade"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16608806569480d289",
+    "banner",
+    "product-grid"
+  ]
+}
