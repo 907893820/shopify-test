@@ -78,6 +78,21 @@
             "text_position": "topLeft",
             "enable_click": false
           }
+        },
+        "382309fb-69ee-43a6-997e-5164b718757d": {
+          "type": "image",
+          "settings": {
+            "pc_image": "shopify:\/\/shop_images\/banner6.webp",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
         }
       },
       "block_order": [
@@ -85,7 +100,8 @@
         "211dc75b-1af0-417e-8ee0-57fd2e7dc896",
         "432b15bd-6cd3-4572-bfb5-017743dc86e5",
         "33b21091-3156-4ce3-9a83-0005a75f1877",
-        "1b8d4185-5a88-4088-adc8-0d2dd8414030"
+        "1b8d4185-5a88-4088-adc8-0d2dd8414030",
+        "382309fb-69ee-43a6-997e-5164b718757d"
       ],
       "settings": {
         "enable_margin_top": false,
