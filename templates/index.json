@@ -214,24 +214,24 @@
         "1661166394c0d2ed7d-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Series <b>7<\/b> | Embrace Future Technology",
             "heading_size": "h1"
           }
         },
         "1661166394c0d2ed7d-1": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Tech that is at the cutting edge of performance and specs.",
             "text_style": "body"
           }
         },
         "1661166394c0d2ed7d-2": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
+            "button_label_1": "Learn More",
             "button_link_1": "",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
