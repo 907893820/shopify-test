@@ -90,7 +90,7 @@
             "btn_url": "https:\/\/baidu.com",
             "btn_1_text": "Learn More",
             "btn_1_url": "",
-            "text_position": "topLeft",
+            "text_position": "bottomCenter",
             "enable_click": false
           }
         }
