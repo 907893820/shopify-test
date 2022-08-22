@@ -3,10 +3,12 @@
 {% comment %}异步加载css{% endcomment %}
 {% comment %}{%- render 'async-css', file_names: header_csses -%}{% endcomment %}
 {{ 'components-header.css' | asset_url | stylesheet_tag }}
+{% if template == 'index' %} {{ 'components-index.css' | asset_url | stylesheet_tag }} {% endif %}
 {% comment %}异步加载js{% endcomment %}
 {% comment %}{%- render 'async-js', file_names: header_js -%}{% endcomment %}
 
 {% comment %} 页头导航 {% endcomment %}
+{% if template != 'index' %} <div style="height:62px"><span></span></div> {% endif %}
 <section class="section-whole-header uk-position-z-index tm-header tm-header--{{ template.name }}" role="banner">
   {%- comment -%} 公告 {%- endcomment -%}
   {%- render 'header-announcement' -%}
@@ -15,6 +17,8 @@
     固定显示头部导航
     {% if template != 'page.wholesale' %}uk-sticky{% endif %}
   {% endcomment %}
+  
+    
   <div class="uk-navbar-container uk-navbar-transparent">
     <div class="uk-flex uk-container uk-container-expand header-content" uk-navbar>
       {%- comment -%} Header logo {%- endcomment -%}
@@ -24,6 +28,7 @@
       {%- comment -%} Header right {%- endcomment -%}
       {%- render 'header-right' -%}
     </div>
+    
   </div>
 </section>
 {%- comment -%} 手机端导航 {%- endcomment -%}

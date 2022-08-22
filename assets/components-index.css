@@ -1,0 +1,15 @@
+.section-whole-header .header-content .uk-navbar-toggle {
+  color: white;
+}
+
+.section-whole-header .header-content:hover .uk-icon {
+  color: #323232;
+}
+
+.section-whole-header .header-content:hover .uk-navbar-nav li a {
+  color: #323232;
+}
+
+.section-whole-header .uk-navbar-nav li > a {
+  color: white;
+}

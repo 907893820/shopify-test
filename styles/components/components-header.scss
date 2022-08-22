@@ -1,6 +1,6 @@
 .section-whole-header{
     position: fixed;
-    top: 0;
+    top: 0; 
     width: 100%;
     transition: all 0.3s ease-in-out;
     .header-content{
@@ -9,18 +9,19 @@
         .uk-navbar-right{
             margin-left: 0;
         }
-        .uk-icon,.uk-navbar-toggle{
-            color: white;
-        }
+        // .uk-icon,.uk-navbar-toggle{
+        //     color: white;
+        // }
     }
     .uk-navbar-nav{
         li{
             border-bottom: 2px solid transparent;
             a{
+                color: #323232;
                 text-transform: capitalize;
                 font-size: 14px;
                 text-decoration: none !important;
-                &:hover,&:hover h3{
+                &:hover , &:hover h3{
                     color: #00a7e1;
                 }
             }
@@ -72,7 +73,7 @@
             // }
             
         }
-        .super-menu__new-shop-list{
+        .super-menu__new-shop-list{ 
             width: 20%;
             .super-menu__new_shop-item{
                 display: flex;
@@ -103,13 +104,6 @@
     
     &:hover{
         background-color: white;
-        .uk-navbar-nav{
-            li{
-                a{
-                    color: #323232;
-                }
-            }
-        }
         .header-content *{
             color: #323232;
         }
