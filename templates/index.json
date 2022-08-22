@@ -69,11 +69,11 @@
           "settings": {
             "pc_image": "shopify:\/\/shop_images\/banner5.webp",
             "title": "FASTER <br> SMARTER  <br>  SAFER",
-            "subtitle": "",
+            "subtitle": "Anker Nano Pro",
             "description": "",
-            "btn_text": "Buy Now",
-            "btn_url": "",
-            "btn_1_text": "Learn More",
+            "btn_text": "Learn More",
+            "btn_url": "https:\/\/baidu.com",
+            "btn_1_text": "",
             "btn_1_url": "",
             "text_position": "topLeft",
             "enable_click": false
