@@ -159,6 +159,55 @@
         "show_text_below": false
       }
     },
+    "16611662313ff39aac": {
+      "type": "image-banner",
+      "blocks": {
+        "16611662319d883d3f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Series <b>6<\/b> | Discover Unique Experiences",
+            "heading_size": "h1"
+          }
+        },
+        "16611662319d883d3f-1": {
+          "type": "text",
+          "settings": {
+            "text": "Tech with unique functionality and features.",
+            "text_style": "body"
+          }
+        },
+        "16611662319d883d3f-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16611662319d883d3f-0",
+        "16611662319d883d3f-1",
+        "16611662319d883d3f-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner2_813948f7-7b38-4f42-8934-bcf54140d0a6.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "color": "",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -325,6 +374,7 @@
   "order": [
     "1660204248cd785013",
     "image_banner",
+    "16611662313ff39aac",
     "rich_text",
     "featured_collection",
     "collage",
