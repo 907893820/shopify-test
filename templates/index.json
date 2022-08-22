@@ -7,15 +7,15 @@
           "type": "image",
           "settings": {
             "pc_image": "shopify:\/\/shop_images\/banner1.webp",
-            "slider-content-image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
-            "title": "123",
-            "subtitle": "123",
-            "description": "123",
-            "btn_text": "Buy Now",
+            "slider-content-image": "shopify:\/\/shop_images\/banner1-logo1.webp",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "learn More",
             "btn_url": "https:\/\/www.baidu.com",
             "btn_1_text": "Learn More",
             "btn_1_url": "",
-            "text_position": "middleRight",
+            "text_position": "topCenter",
             "enable_click": false
           }
         },
