@@ -6,7 +6,7 @@
         "4aa03788-25c5-4244-b175-d639dfcec486": {
           "type": "image",
           "settings": {
-            "pc_image": "shopify:\/\/shop_images\/09fcde363f7560d536390fde45352324.jpg",
+            "pc_image": "shopify:\/\/shop_images\/banner1.webp",
             "slider-content-image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
             "title": "123",
             "subtitle": "123",
@@ -22,7 +22,7 @@
         "211dc75b-1af0-417e-8ee0-57fd2e7dc896": {
           "type": "image",
           "settings": {
-            "pc_image": "shopify:\/\/shop_images\/eb79e3fc238a2030228cd4e4795aab3f.jpg",
+            "pc_image": "shopify:\/\/shop_images\/banner2.webp",
             "title": "123",
             "subtitle": "123",
             "description": "123",
@@ -33,11 +33,27 @@
             "text_position": "topLeft",
             "enable_click": false
           }
+        },
+        "432b15bd-6cd3-4572-bfb5-017743dc86e5": {
+          "type": "image",
+          "settings": {
+            "pc_image": "shopify:\/\/shop_images\/banner3.webp",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
         }
       },
       "block_order": [
         "4aa03788-25c5-4244-b175-d639dfcec486",
-        "211dc75b-1af0-417e-8ee0-57fd2e7dc896"
+        "211dc75b-1af0-417e-8ee0-57fd2e7dc896",
+        "432b15bd-6cd3-4572-bfb5-017743dc86e5"
       ],
       "settings": {
         "enable_margin_top": false,
