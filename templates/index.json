@@ -116,8 +116,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "heading": "Series <b>5<\/b> | Enjoy Higher Quality",
+            "heading_size": "h1"
           }
         },
         "text": {
@@ -145,7 +145,8 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/banner1_0a5b2c24-62b5-40c7-b81b-64c1a8d501d5.webp",
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": false,
         "desktop_content_position": "bottom-center",
