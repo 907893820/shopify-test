@@ -148,6 +148,7 @@
         "image": "shopify:\/\/shop_images\/banner1_0a5b2c24-62b5-40c7-b81b-64c1a8d501d5.webp",
         "image_overlay_opacity": 0,
         "image_height": "large",
+        "color": "#000000",
         "adapt_height_first_image": false,
         "desktop_content_position": "top-center",
         "show_text_box": false,
