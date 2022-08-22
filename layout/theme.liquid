@@ -29,6 +29,7 @@
 
     {% render 'meta-tags' %}
     {{ 'uikit.min.css' | asset_url | stylesheet_tag }}
+    {{ 'common.css' | asset_url | stylesheet_tag }}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'uikit.min.js' | asset_url }}" defer="defer"></script>

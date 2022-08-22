@@ -1,0 +1,17 @@
+* {
+  line-height: 1;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.Alink {
+  transition: all 0.3s ease-in-out;
+}
+
+.Alink:hover {
+  color: white !important;
+  background-color: #10b5ec !important;
+  border: 1px solid #10b5ec !important;
+}

@@ -1,5 +1,35 @@
-.gradient{
+.colorSelect{
     b{
+        font-size:6vw;
+    }
+    .banner__heading{
+        line-height: 1;
+    }
+    .banner__text{
+        font-size: 1.3vw;
+    }
+    .banner__buttons{
+        a{
+            width: max-content;
+            margin-top: 32px;
+            height: 36px;
+            min-height: 36px;
+            min-width: 198px;
+            cursor: pointer;
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 36px;
+            --tw-text-opacity: 1;
+            color: rgb(0,0,0);
+            border-radius: 18px;
+            border: 1px solid #000;
+            font-weight: 400;
+            &::after{
+                box-shadow: none !important;
+            }
+        }
         
     }
 }
