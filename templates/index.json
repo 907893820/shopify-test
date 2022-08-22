@@ -30,7 +30,7 @@
             "btn_url": "shopify:\/\/products\/ep500",
             "btn_1_text": "Learn More",
             "btn_1_url": "",
-            "text_position": "topLeft",
+            "text_position": "topCenter",
             "enable_click": false
           }
         },
