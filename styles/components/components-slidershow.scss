@@ -26,16 +26,22 @@ $btn-hover-border: 1px solid $btn-hover-background;
 
   .uk-position-relative {
 
-    h2,
-    h3,
+    h2{
+      font-size: 2.5vw;
+      color: white;
+    }
+    h3{
+      font-size: 1.3vw;
+      color: white;
+    }
     p {
       color: white;
     }
   }
 
-  // .button-group{
-  //   display: inline-block;
-  // }
+  .button-group{
+    display: inline-block;
+  }
 
   .uk-button {
     width: max-content;
@@ -100,8 +106,10 @@ $btn-hover-border: 1px solid $btn-hover-background;
   }
 
   .slider-content-image{
-    width: 350px;
-    height: 135px;
+    // width: 350px;
+    // height: 135px;
+    width: 50%;
+    height: auto;
     display: inline-block;
     background-size: cover;
   }

@@ -1,4 +1,5 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'components-imagebanner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.adapt_height_first_image and section.settings.image != blank -%}
   {%- style -%}
@@ -19,6 +20,10 @@
       content: '';
       display: block;
     }
+  }
+  
+  .colorSelect{
+    color:{{ section.settings.color }}
   }
   {%- endstyle -%}
 {%- endif -%}
@@ -87,16 +92,16 @@
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient colorSelect">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2 class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
-              <span>{{ block.settings.heading | escape }}</span>
+              <span>{{ block.settings.heading }}</span>
             </h2>
           {%- when 'text' -%}
             <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-              <span>{{ block.settings.text | escape }}</span>
+              <span>{{ block.settings.text }}</span>
             </div>
           {%- when 'buttons' -%}
             <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
@@ -161,6 +166,11 @@
       "label": "t:sections.image-banner.settings.image_height.label",
       "info": "t:sections.image-banner.settings.image_height.info"
     },
+    {
+      "type":"color",
+      "id":"color",
+      "label":"select color"
+    }
     {
       "type": "checkbox",
       "id": "adapt_height_first_image",

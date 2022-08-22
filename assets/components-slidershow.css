@@ -15,10 +15,22 @@
   background-size: cover;
 }
 
-.index_new_swiper .uk-position-relative h2,
-.index_new_swiper .uk-position-relative h3,
+.index_new_swiper .uk-position-relative h2 {
+  font-size: 2.5vw;
+  color: white;
+}
+
+.index_new_swiper .uk-position-relative h3 {
+  font-size: 1.3vw;
+  color: white;
+}
+
 .index_new_swiper .uk-position-relative p {
   color: white;
+}
+
+.index_new_swiper .button-group {
+  display: inline-block;
 }
 
 .index_new_swiper .uk-button {
@@ -80,8 +92,8 @@
 }
 
 .index_new_swiper .slider-content-image {
-  width: 350px;
-  height: 135px;
+  width: 50%;
+  height: auto;
   display: inline-block;
   background-size: cover;
 }
