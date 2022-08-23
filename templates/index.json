@@ -509,10 +509,21 @@
             "btn_text": "Learn More",
             "btn_url": "https:\/\/baidu.com"
           }
+        },
+        "5f8fcc03-dcc6-4a21-9bc8-bafe17dbed33": {
+          "type": "image-test",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_63_1600x_4f323e85-f77a-4931-a06e-86874af46c0a.webp",
+            "title": "Our Community",
+            "info": "Connect with 900,000 users for",
+            "btn_text": "join Us",
+            "btn_url": "https:\/\/baidu.com"
+          }
         }
       },
       "block_order": [
-        "16612461977ec4bc10-0"
+        "16612461977ec4bc10-0",
+        "5f8fcc03-dcc6-4a21-9bc8-bafe17dbed33"
       ],
       "settings": {
         "title": "",
