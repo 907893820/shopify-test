@@ -546,10 +546,22 @@
             "btn_url": "",
             "color": "#ffffff"
           }
+        },
+        "e93eb765-307a-4af7-9520-2e1943d59a3f": {
+          "type": "image-test",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/What_s_Trending596_596_600x_5f147f57-824d-4363-b704-2ab653e1fe67.webp",
+            "title": "Anker 735 Charger (GaNPrime 65W)",
+            "info": "Compact 3-Device Charger",
+            "btn_text": "Learn More",
+            "btn_url": "",
+            "color": "#ffffff"
+          }
         }
       },
       "block_order": [
-        "16612497048820db06-0"
+        "16612497048820db06-0",
+        "e93eb765-307a-4af7-9520-2e1943d59a3f"
       ],
       "settings": {
         "title": "",
