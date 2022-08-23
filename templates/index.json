@@ -107,7 +107,8 @@
         "enable_margin_top": false,
         "enable_autoplay": true,
         "autoplay_interval": 3,
-        "animation": "slide"
+        "animation": "slide",
+        "isHeader_slider": true
       }
     },
     "image_banner": {
@@ -342,37 +343,6 @@
     },
     "166123345412579a20": {
       "type": "brandInfo",
-      "blocks": {
-        "7b0156c8-d858-41a7-813a-064c2d8f566c": {
-          "type": "image-text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/banner3_9cd84237-fdac-4c94-af71-b5c3e124bee4.webp",
-            "title": "<span>200<\/span> Million+",
-            "article": "200 Million+ Products Sold Worldwide"
-          }
-        },
-        "546b8ce5-261b-409c-927f-12a21c6ae22f": {
-          "type": "image-text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/banner2_813948f7-7b38-4f42-8934-bcf54140d0a6.webp",
-            "title": "<span>146<\/span> Countries",
-            "article": "Available in 146 Countries"
-          }
-        },
-        "50503e69-be87-4790-9d2b-9f35acce44ff": {
-          "type": "image-text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/banner6.webp",
-            "title": "<span>10<\/span> Years of Innovation",
-            "article": "Pioneer in Charging Technology for 10 Years"
-          }
-        }
-      },
-      "block_order": [
-        "7b0156c8-d858-41a7-813a-064c2d8f566c",
-        "546b8ce5-261b-409c-927f-12a21c6ae22f",
-        "50503e69-be87-4790-9d2b-9f35acce44ff"
-      ],
       "settings": {
         "enable_margin_top": true,
         "enable_margin_bottom": true,
@@ -474,6 +444,22 @@
         "animation": "slide",
         "isHeader_slider": false
       }
+    },
+    "1661243845b5c8bfd1": {
+      "type": "featured",
+      "blocks": {
+        "16612438443a05c7b8-0": {
+          "type": "image-test",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "16612438443a05c7b8-0"
+      ],
+      "settings": {
+        "title": "Featured On"
+      }
     }
   },
   "order": [
@@ -483,6 +469,7 @@
     "1661166394e37c7350",
     "1661221478ec2e110d",
     "166123345412579a20",
-    "1661239005def58c62"
+    "1661239005def58c62",
+    "1661243845b5c8bfd1"
   ]
 }
