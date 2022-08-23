@@ -530,7 +530,7 @@
       "settings": {
         "title": "Discover More",
         "text_position": "middle_center",
-        "image_height": 500
+        "image_height": 360
       }
     },
     "16612497043d1882aa": {
@@ -565,7 +565,8 @@
       ],
       "settings": {
         "title": "",
-        "text_position": "middle_center"
+        "text_position": "middle_center",
+        "image_height": 592
       }
     }
   },
