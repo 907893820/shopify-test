@@ -257,6 +257,26 @@
         "show_text_below": false
       }
     },
+    "1661221478ec2e110d": {
+      "type": "categories",
+      "blocks": {
+        "166122147849957c89-0": {
+          "type": "image-test",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner3_9cd84237-fdac-4c94-af71-b5c3e124bee4.webp",
+            "title": "第一个图片",
+            "url": "https:\/\/baidu.com"
+          }
+        }
+      },
+      "block_order": [
+        "166122147849957c89-0"
+      ],
+      "settings": {
+        "enable_margin_top": false,
+        "enable_margin_bottom": false
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -425,6 +445,7 @@
     "image_banner",
     "16611662313ff39aac",
     "1661166394e37c7350",
+    "1661221478ec2e110d",
     "rich_text",
     "featured_collection",
     "collage",
