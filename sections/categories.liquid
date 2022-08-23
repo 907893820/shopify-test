@@ -17,7 +17,27 @@
     {
         "name":"categories",
         "tag": "section",
-        "settings":[],
+        "settings":[
+            {
+                "type": "header",
+                "content": "边距配置",
+                "info": "配置边距"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_margin_top",
+                "label": "是否开启顶部边距?",
+                "default": false,
+                "info": "设置顶部的边距"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_margin_bottom",
+                "label": "是否开启底部边距?",
+                "default": false,
+                "info": "设置底部的边距"
+            }
+        ],
         "blocks":[
             {
                 "type": "image-test",
