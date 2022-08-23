@@ -380,6 +380,100 @@
         "little_title": "*In terms of retail sales value in 2020.",
         "article": "Data source: Euromonitor International (Shanghai) Co., Ltd., measured in terms of retail sales value in 2020, based on research conducted in 11-2021. Brands are defined as mobile charging brands if more than 75% of their retail sales are contributed by mobile phone charging products. Mobile phone charging products include chargers, wireless chargers, power banks, and charging cables, and these accessories can also be used for other consumer electronics devices."
       }
+    },
+    "1661239005def58c62": {
+      "type": "slideshow",
+      "blocks": {
+        "166123900559c410be-0": {
+          "type": "image",
+          "settings": {
+            "pc_image": "shopify:\/\/shop_images\/Group_744_1400x_88abab0f-9626-459e-8e86-568d4df112c4.webp",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
+        },
+        "166123900559c410be-1": {
+          "type": "image",
+          "settings": {
+            "pc_image": "shopify:\/\/shop_images\/Jonathan_Morrison_1400x_c145d765-d75c-4f70-8ff0-6efa4667c47d.webp",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
+        },
+        "e56c4607-b165-4e88-858f-9c1fd91fc39d": {
+          "type": "image",
+          "settings": {
+            "pc_image": "shopify:\/\/shop_images\/Linus_Tech_Tips_1400x_0abc5adc-3dbf-4396-9c20-6d965bc5efc4.webp",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
+        },
+        "60a04e58-e8f8-485c-8cda-3e556398298f": {
+          "type": "image",
+          "settings": {
+            "pc_image": "shopify:\/\/shop_images\/unbox_1400x_7db98370-4254-4539-8833-824db2ee349f.webp",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
+        },
+        "eaa7752a-a9f7-4a66-8e29-d8acc345e84e": {
+          "type": "image",
+          "settings": {
+            "pc_image": "shopify:\/\/shop_images\/ZolloTech_1400x_8915669a-6219-467f-a787-4cd774e3b598.webp",
+            "title": "",
+            "subtitle": "",
+            "description": "",
+            "btn_text": "Buy Now",
+            "btn_url": "",
+            "btn_1_text": "Learn More",
+            "btn_1_url": "",
+            "text_position": "topLeft",
+            "enable_click": false
+          }
+        }
+      },
+      "block_order": [
+        "166123900559c410be-0",
+        "166123900559c410be-1",
+        "e56c4607-b165-4e88-858f-9c1fd91fc39d",
+        "60a04e58-e8f8-485c-8cda-3e556398298f",
+        "eaa7752a-a9f7-4a66-8e29-d8acc345e84e"
+      ],
+      "settings": {
+        "enable_margin_top": false,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "animation": "fade",
+        "isHeader_slider": true
+      }
     }
   },
   "order": [
@@ -388,6 +482,7 @@
     "16611662313ff39aac",
     "1661166394e37c7350",
     "1661221478ec2e110d",
-    "166123345412579a20"
+    "166123345412579a20",
+    "1661239005def58c62"
   ]
 }
