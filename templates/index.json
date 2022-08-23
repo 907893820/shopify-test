@@ -342,6 +342,19 @@
     },
     "166123345412579a20": {
       "type": "brandInfo",
+      "blocks": {
+        "7b0156c8-d858-41a7-813a-064c2d8f566c": {
+          "type": "image-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner3_9cd84237-fdac-4c94-af71-b5c3e124bee4.webp",
+            "title": "<span>200<\/span> Million+",
+            "article": "200 Million+ Products Sold Worldwide"
+          }
+        }
+      },
+      "block_order": [
+        "7b0156c8-d858-41a7-813a-064c2d8f566c"
+      ],
       "settings": {
         "enable_margin_top": true,
         "enable_margin_bottom": true,
