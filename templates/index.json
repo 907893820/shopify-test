@@ -275,11 +275,20 @@
             "title": "第二个图片",
             "url": "https:\/\/baidu.com"
           }
+        },
+        "9c9db6a0-b93e-425e-8baf-6817f303c9d6": {
+          "type": "image-test",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner1_0a5b2c24-62b5-40c7-b81b-64c1a8d501d5.webp",
+            "title": "第三个图片",
+            "url": "https:\/\/baidu.com"
+          }
         }
       },
       "block_order": [
         "166122147849957c89-0",
-        "2654ccad-848b-4e63-8643-021c48d47cca"
+        "2654ccad-848b-4e63-8643-021c48d47cca",
+        "9c9db6a0-b93e-425e-8baf-6817f303c9d6"
       ],
       "settings": {
         "enable_margin_top": false,
