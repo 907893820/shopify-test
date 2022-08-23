@@ -532,6 +532,29 @@
         "text_position": "middle_center",
         "image_height": 500
       }
+    },
+    "16612497043d1882aa": {
+      "type": "popularProduct",
+      "blocks": {
+        "16612497048820db06-0": {
+          "type": "image-test",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/US_pc.webp",
+            "title": "757 PowerHouse",
+            "info": "Built To Power, Made To Last",
+            "btn_text": "Learn More",
+            "btn_url": "",
+            "color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "16612497048820db06-0"
+      ],
+      "settings": {
+        "title": "",
+        "text_position": "middle_center"
+      }
     }
   },
   "order": [
@@ -543,6 +566,7 @@
     "166123345412579a20",
     "1661239005def58c62",
     "1661243845b5c8bfd1",
-    "1661246197a98b2bc4"
+    "1661246197a98b2bc4",
+    "16612497043d1882aa"
   ]
 }
