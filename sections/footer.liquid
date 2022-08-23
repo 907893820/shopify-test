@@ -13,7 +13,7 @@
 <noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
-
+{{ 'components-footer.css' | asset_url | stylesheet_tag }}
 {%- style -%}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
@@ -474,6 +474,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "color_background",
+      "id": "color_background",
+      "label": "Background",
+      "default": "black"
+    },
     {
       "type": "select",
       "id": "color_scheme",
