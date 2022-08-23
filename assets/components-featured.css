@@ -1,10 +1,19 @@
-.featured-list {
+.featured {
   max-width: 1208px;
   margin: auto;
-  display: flex;
 }
 
-.featured-list .featured-item {
+.featured h1 {
+  text-align: center;
+}
+
+.featured .featured-list {
+  display: flex;
+  align-items: center;
+}
+
+.featured .featured-list .featured-item {
   max-width: calc(100% / 6);
   margin-right: 3vw;
+  list-style: none;
 }

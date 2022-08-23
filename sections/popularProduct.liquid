@@ -1,0 +1,60 @@
+{% assign b = section.blocks %}
+{% assign s = section.settings %}
+
+{{ 'components-popularProduct.css' | asset_url | stylesheet_tag }}
+{% schema %}
+    {
+        "name":"popularProduct",
+        "tag": "section",
+        "settings":[
+            {
+                "type":"header",
+                "content":"文案配置"
+            },
+            {
+                "type":"text",
+                "id":"title",
+                "label":"标题"
+            }
+        ],
+        "blocks":[
+            {
+                "type":"image-test",
+                "name": "图文",
+                "limit":6,
+                "settings":[
+                    {
+                        "type":"image_picker",
+                        "id":"image",
+                        "label":"图片选择"
+                    },
+                    {
+                        "type":"text",
+                        "id":"title",
+                        "label":"请输入标题"
+                    },
+                    {
+                        "type":"text",
+                        "id":"info",
+                        "label":"请输入描述"
+                    },
+                    {
+                        "type":"text",
+                        "id":"btn_text",
+                        "label":"按钮文案"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "popularProduct",
+                "blocks": [
+                    {
+                        "type": "image-test"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

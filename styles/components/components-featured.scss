@@ -1,9 +1,17 @@
-.featured-list{
+.featured{
     max-width: 1208px;
     margin: auto;
-    display: flex;
-    .featured-item{
-        max-width: calc(100% / 6);
-        margin-right: 3vw;
+    h1{
+        text-align: center;
+    }
+    .featured-list{
+        display: flex;
+        align-items: center;
+        .featured-item{
+            max-width: calc(100% / 6);
+            margin-right: 3vw;
+            list-style: none;
+        }
+        
     }
 }
