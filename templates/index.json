@@ -507,7 +507,9 @@
             "title": "Blog",
             "info": "Get to know more about our products and",
             "btn_text": "Learn More",
-            "btn_url": "https:\/\/baidu.com"
+            "btn_url": "https:\/\/baidu.com",
+            "image_height": 499,
+            "color": "#323232"
           }
         },
         "5f8fcc03-dcc6-4a21-9bc8-bafe17dbed33": {
@@ -517,7 +519,8 @@
             "title": "Our Community",
             "info": "Connect with 900,000 users for",
             "btn_text": "join Us",
-            "btn_url": "https:\/\/baidu.com"
+            "btn_url": "https:\/\/baidu.com",
+            "color": ""
           }
         }
       },
