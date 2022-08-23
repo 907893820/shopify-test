@@ -181,29 +181,29 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "About",
+              "menu": "_about"
             }
           },
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
-              "menu": "footer"
+              "heading": "Program",
+              "menu": "_program"
             }
           },
-          "footer-2": {
-            "type": "text",
+          "02dc8f1d-0e30-4a9a-b1ce-35486333779c": {
+            "type": "link_list",
             "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "heading": "Support",
+              "menu": "_support"
             }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
-          "footer-2"
+          "02dc8f1d-0e30-4a9a-b1ce-35486333779c"
         ],
         "settings": {
           "color_scheme": "background-1",
