@@ -336,8 +336,8 @@
         "c1f3db71-217b-4b35-9344-efb99e4160ee"
       ],
       "settings": {
-        "enable_margin_top": false,
-        "enable_margin_bottom": false
+        "enable_margin_top": true,
+        "enable_margin_bottom": true
       }
     },
     "rich_text": {
