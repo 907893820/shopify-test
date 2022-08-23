@@ -1,0 +1,11 @@
+.popularProduct{
+    max-width: 1208px;
+    margin: auto;
+    text-align: center;
+    .popularProduct-list{
+        display: flex;
+        .popularProduct-item{
+            flex: 1;
+        }
+    }
+}

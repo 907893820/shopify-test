@@ -2,6 +2,24 @@
 {% assign s = section.settings %}
 
 {{ 'components-popularProduct.css' | asset_url | stylesheet_tag }}
+<div class="popularProduct">
+    <h1>{{ b.settings.title }}</h1>
+    <div class="popularProduct-list">
+        {% for block in b %}
+        {% assign b_s = block.settings %}
+        <div class="popularProduct-item"  {% if b.image != blank %}data-src="{{ b.image | img_url: 'master' }}" uk-img="loading: eager"{% endif %}>
+            <h1>{{ b_s.title }}</h1>
+            <p>{{ b_s.info }}</p>
+            <div>
+                <a class="uk-button uk-button-small uk-button-default uk-border-round uk-text-500" href="{{ b_s.btn_url }}">
+                  {{ b_s.btn_text }}
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 {% schema %}
     {
         "name":"popularProduct",
@@ -15,13 +33,57 @@
                 "type":"text",
                 "id":"title",
                 "label":"标题"
+            },
+            {
+                "type":"select",
+                "id": "text_position",
+                "label": "文案位置选择",
+                "default": "middle_center",
+                "options":[
+                    {
+                        "label": "Top Left",
+                        "value": "top_left"
+                    },
+                    {
+                        "label": "Top Center",
+                        "value": "top_center"
+                    },
+                    {
+                        "label": "Top Right",
+                        "value": "top_right"
+                    },
+                    {
+                        "label": "Middle Left",
+                        "value": "middle_left"
+                    },
+                    {
+                        "label": "Middle Center",
+                        "value": "middle_center"
+                    },
+                    {
+                        "label": "Middle Right",
+                        "value": "middle_right"
+                    },
+                    {
+                        "label": "Bottom Left",
+                        "value": "bottom_left"
+                    },
+                    {
+                        "label": "Bottom Center",
+                        "value": "bottom_center"
+                    },
+                    {
+                        "label": "Bottom Right",
+                        "value": "bottom_right"
+                    }
+                ]
             }
         ],
         "blocks":[
             {
                 "type":"image-test",
                 "name": "图文",
-                "limit":6,
+                "limit":2,
                 "settings":[
                     {
                         "type":"image_picker",
@@ -42,6 +104,11 @@
                         "type":"text",
                         "id":"btn_text",
                         "label":"按钮文案"
+                    },
+                    {
+                        "type":"url",
+                        "id":"btn_url",
+                        "label":"跳转地址"
                     }
                 ]
             }
