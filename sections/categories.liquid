@@ -5,9 +5,10 @@
 <div class="categories-list">
     {% for block in s %}
         {% if block.image != blank and block.url != blank %}
-        <a href="{{ block.url }}" class="categories-item">
-            <img src="{{ block.image}}" alt="">    
-            <p>{{ block.text }}</p>
+        {% assign b = block.settings %}
+        <a href="{{ b.url }}" class="categories-item">
+            <img src="{{ b.image}}" alt="">    
+            <p>{{ b.text }}</p>
         </a>
         {% endif %}
     {% endfor %}
