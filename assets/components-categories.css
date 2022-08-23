@@ -1,0 +1,9 @@
+.categories-list {
+  max-width: 1208px;
+  margin: auto;
+  display: flex;
+}
+
+.categories-list .categories-item {
+  width: calc(100% / 8);
+}
