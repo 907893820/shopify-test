@@ -264,7 +264,7 @@
           "type": "image-test",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner3_9cd84237-fdac-4c94-af71-b5c3e124bee4.webp",
-            "title": "第一个图片",
+            "title": "Chargers",
             "url": "https:\/\/baidu.com"
           }
         },
@@ -272,7 +272,7 @@
           "type": "image-test",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner2_813948f7-7b38-4f42-8934-bcf54140d0a6.webp",
-            "title": "第二个图片",
+            "title": "Power Stations",
             "url": "https:\/\/baidu.com"
           }
         },
@@ -280,7 +280,7 @@
           "type": "image-test",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner1_0a5b2c24-62b5-40c7-b81b-64c1a8d501d5.webp",
-            "title": "第三个图片",
+            "title": "Power Banks",
             "url": "https:\/\/baidu.com"
           }
         },
@@ -288,7 +288,7 @@
           "type": "image-test",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner1-logo1.webp",
-            "title": "第四个图片",
+            "title": "Cables",
             "url": "https:\/\/baidu.com"
           }
         },
@@ -296,7 +296,7 @@
           "type": "image-test",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner5.webp",
-            "title": "第五个图片",
+            "title": "Wireless",
             "url": "https:\/\/baidu.com"
           }
         },
@@ -304,7 +304,7 @@
           "type": "image-test",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner4.webp",
-            "title": "第六个图片",
+            "title": "AC Power",
             "url": "https:\/\/baidu.com"
           }
         },
@@ -312,7 +312,7 @@
           "type": "image-test",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner3.webp",
-            "title": "第七个图片",
+            "title": "Hubs and Docks",
             "url": "https:\/\/baidu.com"
           }
         },
@@ -320,7 +320,7 @@
           "type": "image-test",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner2.webp",
-            "title": "第八个图片",
+            "title": "All products",
             "url": "https:\/\/baidu.com"
           }
         }
