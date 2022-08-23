@@ -496,6 +496,28 @@
       "settings": {
         "title": "Featured On"
       }
+    },
+    "1661246197a98b2bc4": {
+      "type": "popularProduct",
+      "blocks": {
+        "16612461977ec4bc10-0": {
+          "type": "image-test",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/community-594x364-pc_1600x_ed87c1cb-273f-412d-af0d-f2dcf215d771.webp",
+            "title": "Blog",
+            "info": "Get to know more about our products and",
+            "btn_text": "Learn More",
+            "btn_url": "https:\/\/baidu.com"
+          }
+        }
+      },
+      "block_order": [
+        "16612461977ec4bc10-0"
+      ],
+      "settings": {
+        "title": "",
+        "text_position": "middle_center"
+      }
     }
   },
   "order": [
@@ -506,6 +528,7 @@
     "1661221478ec2e110d",
     "166123345412579a20",
     "1661239005def58c62",
-    "1661243845b5c8bfd1"
+    "1661243845b5c8bfd1",
+    "1661246197a98b2bc4"
   ]
 }
