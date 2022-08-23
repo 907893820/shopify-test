@@ -7,7 +7,7 @@
     <div class="popularProduct-list">
         {% for block in b %}
         {% assign b_s = block.settings %}
-        <div class="popularProduct-item"  {% if b.image != blank %}data-src="{{ b.image | img_url: 'master' }}" uk-img="loading: eager"{% endif %}>
+        <div class="popularProduct-item"  {% if b_s.image != blank %}data-src="{{ b_s.image | img_url: 'master' }}" uk-img="loading: eager"{% endif %}>
             <h1>{{ b_s.title }}</h1>
             <p>{{ b_s.info }}</p>
             <div>
@@ -77,6 +77,17 @@
                         "value": "bottom_right"
                     }
                 ]
+            },
+            {
+                "type":"number",
+                "id":"image_height",
+                "label":"图片高度",
+                "info":"默认高度300px"
+            },
+            {
+                "type":"color",
+                "id":"color",
+                "label":"文案颜色"
             }
         ],
         "blocks":[
