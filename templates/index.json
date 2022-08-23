@@ -315,6 +315,14 @@
             "title": "第七个图片",
             "url": ""
           }
+        },
+        "c1f3db71-217b-4b35-9344-efb99e4160ee": {
+          "type": "image-test",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner2.webp",
+            "title": "第八个图片",
+            "url": "https:\/\/baidu.com"
+          }
         }
       },
       "block_order": [
@@ -324,7 +332,8 @@
         "fa219f0f-b954-4693-adf4-3e8cb10452dc",
         "0e0da73a-97d2-40f9-8245-c1cab2436a15",
         "b12da6cd-d597-4449-a173-b6281f79b088",
-        "80abbfdd-615d-4357-934b-42164acb3625"
+        "80abbfdd-615d-4357-934b-42164acb3625",
+        "c1f3db71-217b-4b35-9344-efb99e4160ee"
       ],
       "settings": {
         "enable_margin_top": false,
