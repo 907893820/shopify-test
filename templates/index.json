@@ -350,10 +350,19 @@
             "title": "<span>200<\/span> Million+",
             "article": "200 Million+ Products Sold Worldwide"
           }
+        },
+        "546b8ce5-261b-409c-927f-12a21c6ae22f": {
+          "type": "image-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner2_813948f7-7b38-4f42-8934-bcf54140d0a6.webp",
+            "title": "<span>146<\/span> Countries",
+            "article": "Available in 146 Countries"
+          }
         }
       },
       "block_order": [
-        "7b0156c8-d858-41a7-813a-064c2d8f566c"
+        "7b0156c8-d858-41a7-813a-064c2d8f566c",
+        "546b8ce5-261b-409c-927f-12a21c6ae22f"
       ],
       "settings": {
         "enable_margin_top": true,
