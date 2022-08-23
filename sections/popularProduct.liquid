@@ -1,19 +1,45 @@
 {% assign b = section.blocks %}
 {% assign s = section.settings %}
+{% style %}
+    .popularProduct-{{ section.id }} .popularProduct-item{
+        {% if s.image_height != blank %}
+            height:{{ s.image_height }}px;
+        {% else %}
+            height:300px;
+        {% endif %}
+    }
+    .popularProduct-{{ section.id }} .enable_margin_top{
+        margin-top:30px;
+    }
+    .popularProduct-{{ section.id }} .enable_margin_bottom{
+        margin-bottom:30px;
+    }
+{% endstyle %}
 
 {{ 'components-popularProduct.css' | asset_url | stylesheet_tag }}
-<div class="popularProduct">
+<div class="popularProduct popularProduct-{{ section.id }} {% if s.enable_margin_top%} enable_margin_top {% endif %} {% if s.enable_margin_bottom%} enable_margin_bottom {% endif %}" >
     <h1>{{ b.settings.title }}</h1>
     <div class="popularProduct-list">
         {% for block in b %}
         {% assign b_s = block.settings %}
-        <div class="popularProduct-item"  {% if b_s.image != blank %}data-src="{{ b_s.image | img_url: 'master' }}" uk-img="loading: eager"{% endif %}>
-            <h1>{{ b_s.title }}</h1>
-            <p>{{ b_s.info }}</p>
-            <div>
-                <a class="uk-button uk-button-small uk-button-default uk-border-round uk-text-500" href="{{ b_s.btn_url }}">
-                  {{ b_s.btn_text }}
-                </a>
+        {% style %}
+            .popularProduct-item-{{ block.id }} , .popularProduct-item-{{ block.id }} h1 , .popularProduct-item-{{ block.id }} .uk-button{
+                color:{{ b_s.color }};
+            } 
+            .popularProduct-item-{{ block.id }} .uk-button{
+                border: 1px solid {{ b_s.color }};
+            } 
+        {% endstyle %}
+
+        <div class="popularProduct-item popularProduct-item-{{ block.id }}"  {% if b_s.image != blank %} data-src="{{ b_s.image | img_url: 'master' }}" uk-img="loading: eager"{% endif %}>
+            <div class="popularProduct-position">
+                <h1>{{ b_s.title }}</h1>
+                <p>{{ b_s.info }}</p>
+                <div>
+                    <a class="uk-button uk-button-small uk-button-default uk-border-round uk-text-500" href="{{ b_s.btn_url }}">
+                    {{ b_s.btn_text }}
+                    </a>
+                </div>
             </div>
         </div>
         {% endfor %}
@@ -25,6 +51,20 @@
         "name":"popularProduct",
         "tag": "section",
         "settings":[
+            {
+                "type": "checkbox",
+                "id": "enable_margin_top",
+                "label": "是否开启顶部边距?",
+                "default": false,
+                "info": "设置顶部的边距"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_margin_bottom",
+                "label": "是否开启底部边距?",
+                "default": false,
+                "info": "设置顶部的边距"
+            },
             {
                 "type":"header",
                 "content":"文案配置"

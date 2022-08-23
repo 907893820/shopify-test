@@ -4,8 +4,11 @@
     text-align: center;
     .popularProduct-list{
         display: flex;
+        justify-content: space-between;
         .popularProduct-item{
-            flex: 1;
+            width: calc((100% - 16px) / 2);
+            // flex: 1;
+            background-size: cover;
         }
     }
 }

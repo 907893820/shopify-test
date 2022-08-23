@@ -14,10 +14,7 @@
 
 {% comment %}引入css{% endcomment %}
 {{ 'components-slidershow.css' | asset_url | stylesheet_tag }}
-
-{% unless section.settings.isHeader_slider %}
-  {{ 'normal-slidershow.css' | asset_url | stylesheet_tag }}
-{% endunless %}
+{{ 'normal-slidershow.css' | asset_url | stylesheet_tag }}
 
 {% comment %}箭头图标{% endcomment %}
 {%- capture icon_chevron_right -%}
@@ -28,7 +25,7 @@
   <svg width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" stroke-width="1.03" points="13 16 7 10 13 4"></polyline></svg>
 {%- endcapture -%}
 
-<div class="{% if s.enable_margin_top %}uk-margin-small-top{% endif %} uk-overflow-hidden index_new_swiper" data-section-type="slideshow" data-section-id="{{ section.id }}">
+<div id="Banner--{{ section.id }}" class="{% if s.enable_margin_top %}uk-margin-small-top{% endif %} uk-overflow-hidden index_new_swiper {% unless s.isHeader_slider %} normal-banner {% endunless %}" data-section-type="slideshow" data-section-id="{{ section.id }}">
   <div class="uk-visible-toggle uk-position-relative" uk-slideshow="{{ config | strip_newlines }}">
     <ul class="uk-slideshow-items">
       {%- for block in section.blocks -%}
