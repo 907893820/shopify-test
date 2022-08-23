@@ -1,0 +1,10 @@
+.featured-list {
+  max-width: 1208px;
+  margin: auto;
+  display: flex;
+}
+
+.featured-list .featured-item {
+  max-width: calc(100% / 6);
+  margin-right: 3vw;
+}

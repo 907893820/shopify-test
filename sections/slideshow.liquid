@@ -15,6 +15,9 @@
 {% comment %}引入css{% endcomment %}
 {{ 'components-slidershow.css' | asset_url | stylesheet_tag }}
 
+{% unless section.settings.isHeader_slider %}
+  {{ 'normal-slidershow.css' | asset_url | stylesheet_tag }}
+{% endunless %}
 
 {% comment %}箭头图标{% endcomment %}
 {%- capture icon_chevron_right -%}
@@ -146,6 +149,12 @@
           "value": "push"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "isHeader_slider",
+      "label": "是否是首页顶部的轮播图（如果不是,则用另一种展示形式）",
+      "default": true
     }
   ],
   "blocks": [

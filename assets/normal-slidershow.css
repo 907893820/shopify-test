@@ -1,0 +1,38 @@
+.index_new_swiper {
+  max-width: 1208px;
+  margin: auto;
+  padding: 5rem 0;
+  overflow: initial;
+}
+
+.index_new_swiper .uk-slideshow-items {
+  min-height: 450px !important;
+  max-height: 450px !important;
+}
+
+.index_new_swiper .uk-slideshow-nav {
+  display: none;
+}
+
+.index_new_swiper .uk-background-center-center {
+  background-size: 1208px auto;
+}
+
+.index_new_swiper .uk-position-center-left {
+  left: -80px;
+}
+
+.index_new_swiper .uk-position-center-right {
+  right: -80px;
+}
+
+.index_new_swiper .uk-visible-toggle:not(:hover):not(:focus) .uk-hidden-hover:not(:focus-within), .index_new_swiper .uk-icon-button {
+  background: none !important;
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.index_new_swiper .uk-visible-toggle:not(:hover):not(:focus) .uk-hidden-hover:not(:focus-within) svg, .index_new_swiper .uk-icon-button svg {
+  width: 50px !important;
+  height: 50px !important;
+}

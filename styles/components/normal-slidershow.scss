@@ -1,0 +1,32 @@
+.index_new_swiper{
+    max-width: 1208px;
+    margin: auto;
+    padding: 5rem 0;
+    overflow: initial;
+    .uk-slideshow-items{
+        min-height: 450px !important;
+        max-height: 450px !important;
+    }
+    .uk-slideshow-nav{
+        display: none;
+    }
+    .uk-background-center-center{
+        background-size: 1208px auto;
+    }
+    .uk-position-center-left{
+        left: -80px;
+    }
+    .uk-position-center-right{
+        right: -80px;
+    }
+    .uk-visible-toggle:not(:hover):not(:focus) .uk-hidden-hover:not(:focus-within),.uk-icon-button{
+        background: none !important;
+        width: 64px !important;
+        height: 64px !important;
+        svg{
+            width: 50px !important;
+            height: 50px !important;
+        }
+    }
+
+}

@@ -3,7 +3,7 @@
 
 {{ 'components-brandInfo.css' | asset_url | stylesheet_tag }}
 
-<div>
+<div class="brandInfo">
     <h2>{{ s.title }}</h2>
     <div class="brandInfo-list {% if s.enable_margin_top %}enable_margin_top{% endif %}  {% if s.enable_margin_bottom %}enable_margin_bottom{% endif %}" >
         {% for block in b %}
@@ -30,11 +30,15 @@
             <div>
                 <h3>{{ b_s.title }}</h3>
             </div>
-            <div>
+            <div class="brandInfo-item-introduce">
                 <p>{{ b_s.article }}</p>
             </div>
         </div>
         {% endfor %}
+    </div>
+    <div class="brandInfo-article">
+        <p>{{ s.little_title }}</p>
+        <p class="brandInfo-article-info">{{ s.article }}</p>
     </div>
 </div>
 
