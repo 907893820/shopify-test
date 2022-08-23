@@ -340,6 +340,16 @@
         "enable_margin_bottom": true
       }
     },
+    "166123345412579a20": {
+      "type": "brandInfo",
+      "settings": {
+        "enable_margin_top": true,
+        "enable_margin_bottom": true,
+        "title": "The World's No. 1 Mobile Charging Brand*",
+        "little_title": "*In terms of retail sales value in 2020.",
+        "article": "Data source: Euromonitor International (Shanghai) Co., Ltd., measured in terms of retail sales value in 2020, based on research conducted in 11-2021. Brands are defined as mobile charging brands if more than 75% of their retail sales are contributed by mobile phone charging products. Mobile phone charging products include chargers, wireless chargers, power banks, and charging cables, and these accessories can also be used for other consumer electronics devices."
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -509,6 +519,7 @@
     "16611662313ff39aac",
     "1661166394e37c7350",
     "1661221478ec2e110d",
+    "166123345412579a20",
     "rich_text",
     "featured_collection",
     "collage",
