@@ -33,7 +33,7 @@
 
 {% schema %}
     {
-        "name":"新版钉钉",
+        "name":"featured",
         "tag": "section",
         "settings":[
             {
@@ -48,7 +48,7 @@
         ],
         "blocks":[
             {
-                "type":"image-text",
+                "type":"image-test",
                 "name": "图文",
                 "limit":6,
                 "settings":[
@@ -56,6 +56,16 @@
                         "type":"image_picker",
                         "id":"image",
                         "label":"图片选择"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "featured",
+                "blocks": [
+                    {
+                        "type": "image-test"
                     }
                 ]
             }
