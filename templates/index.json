@@ -358,11 +358,20 @@
             "title": "<span>146<\/span> Countries",
             "article": "Available in 146 Countries"
           }
+        },
+        "50503e69-be87-4790-9d2b-9f35acce44ff": {
+          "type": "image-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner6.webp",
+            "title": "<span>10<\/span> Years of Innovation",
+            "article": "Pioneer in Charging Technology for 10 Years"
+          }
         }
       },
       "block_order": [
         "7b0156c8-d858-41a7-813a-064c2d8f566c",
-        "546b8ce5-261b-409c-927f-12a21c6ae22f"
+        "546b8ce5-261b-409c-927f-12a21c6ae22f",
+        "50503e69-be87-4790-9d2b-9f35acce44ff"
       ],
       "settings": {
         "enable_margin_top": true,
