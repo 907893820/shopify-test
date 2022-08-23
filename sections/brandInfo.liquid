@@ -1,0 +1,109 @@
+{% assign b = section.blocks %}
+{% assign s = section.settings %}
+
+{{ 'components-brandInfo.css' | asset_url | stylesheet_tag }}
+
+<div>
+    <h2>{{ s.title }}</h2>
+    <div class="brandInfo-list {% if s.enable_margin_top %}enable_margin_top{% endif %}  {% if s.enable_margin_bottom %}enable_margin_bottom{% endif %}" >
+        {% for block in b %}
+        {% assign b_s = block.settings %}
+        <div class="brandInfo-item">
+            {% comment %} <img src="" alt=""> {% endcomment %}
+            <img
+                srcset="{%- if b_s.image.width >= 375 -%}{{ b_s.image | image_url: width: 375 }} 375w,{%- endif -%}
+                  {%- if b_s.image.width >= 750 -%}{{ b_s.image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if b_s.image.width >= 1100 -%}{{ b_s.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                  {%- if b_s.image.width >= 1500 -%}{{ b_s.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if b_s.image.width >= 1780 -%}{{ b_s.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                  {%- if b_s.image.width >= 2000 -%}{{ b_s.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                  {%- if b_s.image.width >= 3000 -%}{{ b_s.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {%- if b_s.image.width >= 3840 -%}{{ b_s.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                  {{ b_s.image | image_url }} {{ b_s.image.width }}w"
+                sizes="100vw"
+                src="{{ b_s.image | image_url: width: 1500 }}"
+                loading="lazy"
+                alt="{{ b_s.image.alt | escape }}"
+                width="{{ b_s.image.width }}"
+                height="{{ b_s.image.width | divided_by: b_s.image.aspect_ratio }}"
+              >
+            <div>
+                <h3>{{ b_s.title }}</h3>
+            </div>
+            <div>
+                <p>{{ b_s.article }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema%}
+    {
+        "name":"brandInfo",
+        "tag": "section",
+        "setting":[
+            {
+                "type": "header",
+                "content": "边距配置",
+                "info": "配置边距"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_margin_top",
+                "label": "是否开启顶部边距?",
+                "default": false,
+                "info": "设置顶部的边距"
+            },
+            {
+                "type": "checkbox",
+                "id": "enable_margin_bottom",
+                "label": "是否开启底部边距?",
+                "default": false,
+                "info": "设置底部的边距"
+            },
+            {
+                "type":"header",
+                "lable":"文案配置",
+            },
+            {
+                "type":"text",
+                "id":"title",
+                "label":"标题"
+            },
+            {
+                "type":"text",
+                "id":"little_title",
+                "label":"小标题"
+            },
+            {
+                "type":"textarea",
+                "id":"article",
+                "label":"正文"
+            }
+        ],
+        "blocks":[
+            {
+                "type":"image-text",
+                "name": "图文",
+                "setting":[
+                    {
+                        "type":"image_picker",
+                        "id":"image",
+                        "label":"图片选择"
+                    },
+                    {
+                        "type":"text",
+                        "id":"title",
+                        "label":"标题"
+                    },
+                    {
+                        "type":"text",
+                        "id":"article",
+                        "label":"正文"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

@@ -6,4 +6,18 @@
 
 .categories-list .categories-item {
   width: calc(100% / 8);
+  margin-right: 16px;
+  text-align: center;
+}
+
+.categories-list .categories-item:hover {
+  color: #10b5ec;
+}
+
+.categories-list.enable_margin_top {
+  margin-top: 100px;
+}
+
+.categories-list.enable_margin_bottom {
+  margin-bottom: 4rem;
 }

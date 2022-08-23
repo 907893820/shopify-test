@@ -2,13 +2,13 @@
 
 {{ 'components-categories.css' | asset_url | stylesheet_tag }}
 
-<div class="categories-list">
+<div class="categories-list {% if section.settings.enable_margin_top %}enable_margin_top{% endif %} {% if section.settings.enable_margin_bottom %}enable_margin_bottom{% endif %}">
     {% for block in s %}
-        {% if block.image != blank and block.url != blank %}
         {% assign b = block.settings %}
+        {% if b.image != blank and b.url != blank %}
         <a href="{{ b.url }}" class="categories-item">
-            <img src="{{ b.image}}" alt="">    
-            <p>{{ b.text }}</p>
+            <img src="{{ b.image | img_url: 'master'}}" alt="">    
+            <p>{{ b.title }}</p>
         </a>
         {% endif %}
     {% endfor %}

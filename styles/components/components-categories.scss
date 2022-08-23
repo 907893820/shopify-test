@@ -4,5 +4,16 @@
     display: flex;
     .categories-item{
         width: calc(100% / 8);
+        margin-right: 16px;
+        text-align: center;
+        &:hover{
+            color: #10b5ec;
+        }
+    }
+    &.enable_margin_top{
+        margin-top: 100px;
+    }
+    &.enable_margin_bottom{
+        margin-bottom: 4rem;
     }
 }
