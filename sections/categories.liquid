@@ -1,0 +1,58 @@
+{% assign s = section.blocks %}
+
+{{ 'components-categories.css' | asset_url | stylesheet_tag }}
+
+<div class="categories-list">
+    {% for block in s %}
+        {% if block.image != blank and block.url != blank %}
+        <a href="{{ block.url }}" class="categories-item">
+            <img src="{{ block.image}}" alt="">    
+            <p>{{ block.text }}</p>
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% schema %}
+    {
+        "name":"categories",
+        "tag": "section",
+        "settings":[],
+        "blocks":[
+            {
+                "type": "image-test",
+                "name": "图文",
+                "limit":8,
+                "settings": [
+                    {
+                        "type":"header",
+                        "content": "图片选择",
+                        "info": "配置图片"
+                    },
+                    {
+                        "type":"image_picker",
+                        "id": "image",
+                        "label": "图片",
+                        "info":"不填则不显示"
+                    },
+                    {
+                        "type":"header",
+                        "content": "文案配置",
+                        "info": "配置与图片配套的文字"
+                    },
+                    {
+                        "type":"text",
+                        "id": "title",
+                        "label": "文案"
+                    },
+                    {
+                        "type": "url",
+                        "id": "url",
+                        "label": "跳转地址",
+                        "info": "不填则不显示"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
