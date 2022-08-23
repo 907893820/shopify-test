@@ -528,6 +528,8 @@
         "5f8fcc03-dcc6-4a21-9bc8-bafe17dbed33"
       ],
       "settings": {
+        "enable_margin_top": true,
+        "enable_margin_bottom": true,
         "title": "Discover More",
         "text_position": "middle_center",
         "image_height": 360
@@ -564,6 +566,8 @@
         "e93eb765-307a-4af7-9520-2e1943d59a3f"
       ],
       "settings": {
+        "enable_margin_top": true,
+        "enable_margin_bottom": true,
         "title": "",
         "text_position": "middle_center",
         "image_height": 592
