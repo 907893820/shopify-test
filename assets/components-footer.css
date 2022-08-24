@@ -130,3 +130,7 @@
 .footer .footer__content-top .Footer_policy_box__nvVaw label span a {
   color: #999999;
 }
+
+.footer__content-bottom {
+  display: none;
+}
